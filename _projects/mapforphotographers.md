@@ -25,19 +25,19 @@ Users can also browse photos shared by others, and like their photos. They can a
 
 ## 2.1 Home
 
-![](https://i.imgur.com/9Ix7oyJ.png)
+<img src="https://i.imgur.com/9Ix7oyJ.png" width="400"/>
 
 A map embedded with public photo markers on it. Photo markers will be resized when zooming in or out, to avoid unreasonable image size shown in the map. When a user click a image, an activity with image details is opened (see section Activity_Single_Image).
 
 ## 2.2 Dashboard
 
-![](https://i.imgur.com/hpdLdWo.png)
+<img src="https://i.imgur.com/hpdLdWo.png" width="400"/>
 
 Here in Dashboard, users can browsing public photos (in upload timestamp order, the most recent one is shown first). There is a search bar, and users can search anything like title (e.g., `doggo`) or exposure time (e.g., `10s`).
 
 ## 2.3 Profile
 
-![](https://i.imgur.com/phEVtn7.png)
+<img src="https://i.imgur.com/phEVtn7.png" width="400"/>
 
 ### Firebase Authentication
 
@@ -49,13 +49,13 @@ At the bottom there is a upload button, and users can upload existing photo thro
 
 ### Liked Photo
 
-![](https://i.imgur.com/NFNY94A.png)
+<img src="https://i.imgur.com/NFNY94A.png" width="400"/>
 
 There a text field showing how many photo a user has liked. By clicking the text field, the number is highlighted and users can browse photos they liked. Users can back to normal mode (viewing photos they uploaded) by click the text field again.
 
 ## 2.X Activity_Single_Image
 
-![](https://i.imgur.com/sDz3wPh.png)
+<img src="https://i.imgur.com/sDz3wPh.png" width="400"/>
 
 Here users can view the details and geo-location of a photo. At the button users can like / unlike a photo. By clicking the thumbnail, users can view the photo in full-screen mode. If user is the owner of photo, a trashcan icon will be shown and user is able to delete the photo.
 
@@ -129,7 +129,7 @@ We have provided our `google-services.json` in the `/app` folder. You are able t
 
 # 9. Database schema
 
-![](https://i.imgur.com/UN9CnUl.png =800x)
+<img src="https://i.imgur.com/8QI261g.png" width="800"/>
 
 # 10. Count of lines of code
 
