@@ -2,7 +2,6 @@
 layout: page
 title: Map of Photographers
 description: Android app created to introduce photographers to new scenic spots
-img: https://i.imgur.com/9Ix7oyJ.png
 importance: 1
 category: school
 redirect: https://github.com/civita/mapforphotographers
