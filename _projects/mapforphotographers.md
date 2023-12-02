@@ -129,7 +129,7 @@ We have provided our `google-services.json` in the `/app` folder. You are able t
 
 # 9. Database schema
 
-![](https://i.imgur.com/UN9CnUl.png)
+![](https://i.imgur.com/UN9CnUl.png =800x)
 
 # 10. Count of lines of code
 
