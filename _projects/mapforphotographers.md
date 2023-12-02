@@ -4,7 +4,7 @@ title: Map of Photographers
 description: Android app created to introduce photographers to new scenic spots
 importance: 1
 category: school
-img: https://i.imgur.com/9Ix7oyJ.png
+img: assets/img/project_mapforphotographers.jpg
 redirect: https://github.com/civita/mapforphotographers
 ---
 
