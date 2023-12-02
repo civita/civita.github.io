@@ -7,7 +7,7 @@ category: school
 img: assets/img/project_mapforphotographers.png
 ---
 
-#### Author
+#### Authors
 
 Michael Chang and Jooyeon Yang
 
