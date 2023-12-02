@@ -1,18 +1,18 @@
-<div class="card-item col-12">
+<div class="card-item">
   {%- if project.redirect -%}
   <a href="{{ project.redirect }}">
   {%- else -%}
   <a href="{{ project.url | relative_url }}">
   {%- endif -%}
-    <div class="card hoverable">
+<!--     <div class="card hoverable"> -->
       <div class="row g-0">
         {%- if project.img -%}
-        <div class="card-img col-md-6">
+        <div class="card-img col-sm-4">
           {% include figure.html path=project.img alt="project thumbnail" %}
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-8">
         {%- else -%}
-        <div class="col-md-12">
+        <div class="col-sm-12">
         {%- endif -%}
           <div class="card-body">
             <h3 class="card-title text-lowercase">{{ project.title }}</h3>
@@ -35,6 +35,6 @@
           </div>
         </div>
       </div>
-    </div>
+<!--     </div> -->
   </a>
 </div>
