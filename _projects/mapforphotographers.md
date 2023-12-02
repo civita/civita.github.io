@@ -4,8 +4,13 @@ title: Map of Photographers
 description: Android app created to introduce photographers to new scenic spots
 importance: 1
 category: school
+img: https://i.imgur.com/9Ix7oyJ.png
 redirect: https://github.com/civita/mapforphotographers
 ---
+
+#### Author
+
+Michael Chang and Jooyeon Yang
 
 # 1. Introduction
 
@@ -136,6 +141,3 @@ We have provided our `google-services.json` in the `/app` folder. You are able t
 
 ![](https://i.imgur.com/KurJrm2.png)
 
-#### Author
-
-Michael Chang and Jooyeon Yang
