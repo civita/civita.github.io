@@ -22,7 +22,8 @@
       year: 2018-2020
       description:
         - 'GPA: 4.25/4.30'
-        - 'Advisor: <a href="https://scholar.google.com/citations?user=gBuHlIQAAAAJ" target="_blank">Tei-Wei Kuo</a> and <a href="https://scholar.google.com.tw/citations?user=ESi9A4EAAAAJ&hl=zh-TW" target="_blank">Chien-Chung Ho</a>'
+        - 'Advised by <a href="https://scholar.google.com/citations?user=gBuHlIQAAAAJ" target="_blank">Tei-Wei Kuo</a> and <a href="https://scholar.google.com.tw/citations?user=ESi9A4EAAAAJ&hl=zh-TW" target="_blank">Chien-Chung Ho</a>'
+        - Researched performance bottlenecks and potential solutions for non-volatile memory on key-value storage and deduplication systems
     - title: BSc in Physics
       institution: National Taiwan University
       year: 2013-2018
