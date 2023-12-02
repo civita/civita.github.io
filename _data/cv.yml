@@ -2,96 +2,96 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Michael Chang
+    # - name: Date of Birth
+    #   value: 14th March 1879
     - name: Languages
-      value: English, German
-
+      value: English (Fluent), Mandarin (Native)
+      
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: MSc in Computer Science
+      institution: The University of Texas at Austin
+      year: 2021-2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - GPA: 3.97/4.00
+        - title: Teaching Assistant
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+            - Parallel Systems (2022 Fall)
+    - title: MSc in Computer Science
+      institution: National Taiwan University
+      year: 2018-2020
       description:
-        - Description 1.
-        - Description 2.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+        - GPA: 4.25/4.30
+        - Advisor: Tei-Wei Kuo and Chien-Chung Ho
+    - title: BSc in Computer Science
+      institution: National Taiwan University
+      year: 2013-2018
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - GPA: 3.99/4.30
+        - Minor in Computer Science and Information Engineering
+        - Presidential Award (top 5% of class): 3 semesters
+        - title: Teaching Assistant
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+            - Numerical Analysis and Programming (2016 Spring)
+        
+- title: Work Experience
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: Software Engineer in Test (SET) Internship
+      institution: Oracle NetSuite
+      year: Jan 2022 - Aug 2022
+      description:
+        - Developed and tested Enterprise Resource Planning (ERP), Customer Resource Management (CRM), and e-commerce web services in Java and TypeScript using IntelliJ IDEA.
+        - Composed test plans for unit tests, MDR (Metadata Repository) tests, and full-stack tests.
+        - Demonstrated proficiency in writing queries for the Oracle Database schema and garnered experience in RESTful API testing and OAuth 2.0 authentication with the Postman API Platform.
+        - Collaborated with other teams using Perforce and Git for version control and code maintenance.
+        - Attained proficiency in Jira and Confluence while working in a dynamic Agile environment, participating in daily Scrum meetings to enhance collaboration and productivity.
+        - Participated in a Hackathon 4Good event, which involved creating NetSuite ERP solutions to support nonprofit customers.
+        - Gained hands-on experience with testing methodologies, software development processes, and teamwork in a professional setting.
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+    - title: Full Stack Developer
+      institution: An-Hui Information Technology Co., Ltd
+      year: Jul 2021 - Dec 2021
+      description:
+        - Developed a web RESTful API service for membership management, ordering and transaction with Golang and Gin framework.
+        - Simplified and automatically generated interactive API documents in swagger format.
+        - Developed company website with Golang and Hugo framework, and hosted it on virtual private server.
+        - Built and maintained Dockerized services for project management and monitoring systems such as Redmine, Grafana, and Prometheus.
 
-- title: Academic Interests
+    - title: Network Infrastructure Administrator
+      institution: Graduate Institute of Communication Engineering, National Taiwan University
+      year: Oct 2018 - May 2020
+      description:
+        - Led the network administration team; monitored and maintained network switches, routers, firewall, and network-attached storage in the department.
+        - Effectively utilized Wireshark and TCPdump to identify and resolve network-related issues, ensuring optimal system performance.
+        - Developed online thesis submission system with PHP and JavaScript.
+        - Provided technical support for computer hardware, servers, virtual machines, and Windows applications.
+
+- title: Technical Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Programming
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Java
+        - Python
+        - Golang
+        - C++
+        - Javascript
+    - title: Backend
       items:
-        - Description 1.
-        - Description 2.
+        - Nginx
+        - SQL
+    - title: Others
+      items:
+        - Linux
+        - Docker
+        - git
+        - Bash script
+        - PyTorch
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> <a href="https://www.behance.net/windsketch" target="_blank">Photography</a>, <a href="https://youtu.be/ST4cKbwhCWE" target="_blank">percussion</a>, and dispersed camping.
