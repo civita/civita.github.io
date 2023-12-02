@@ -41,14 +41,13 @@
       company: Oracle NetSuite
       year: Jan 2022 - Aug 2022
       description:
-        - Developed and tested Enterprise Resource Planning (ERP), Customer Resource Management (CRM), and e-commerce web services in Java and TypeScript using IntelliJ IDEA.
-        - Composed test plans for unit tests, MDR (Metadata Repository) tests, and full-stack tests.
-        - Demonstrated proficiency in writing queries for the Oracle Database schema and garnered experience in RESTful API testing and OAuth 2.0 authentication with the Postman API Platform.
+        - Developed and tested Enterprise Resource Planning, Customer Resource Management, and e-commerce web services in Java and TypeScript.
+        - Composed test plans for unit tests, metadata repository tests, and full-stack tests, achieving an average code coverage of above 90%.
+        - Demonstrated proficiency in writing queries for the Oracle Database schema and garnered experience in RESTful API testing and OAuth with Postman.
         - Collaborated with other teams using Perforce and Git for version control and code maintenance.
-        - Attained proficiency in Jira and Confluence while working in a dynamic Agile environment, participating in daily Scrum meetings to enhance collaboration and productivity.
+        - Attained proficiency in Jira and Confluence while working in a dynamic Agile environment, actively engaging in daily Scrum meetings to enhance collaboration and productivity.
         - Participated in a Hackathon 4Good event, which involved creating NetSuite ERP solutions to support nonprofit customers.
-        - Gained hands-on experience with testing methodologies, software development processes, and teamwork in a professional setting.
-
+ 
     - title: Full Stack Developer
       company: An-Hui Information Technology Co., Ltd
       year: Jul 2021 - Dec 2021
