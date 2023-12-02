@@ -132,3 +132,11 @@ We have provided our `google-services.json` in the `/app` folder. You are able t
 
 - Kotlin: 1513
 - XML: 1031
+
+# 11. Code frequency graph
+
+![](https://i.imgur.com/KurJrm2.png)
+
+#### Author
+
+Michael Chang and Jooyeon Yang
