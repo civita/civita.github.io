@@ -5,9 +5,9 @@
       value: Michael Chang
     # - name: Date of Birth
     #   value: 14th March 1879
-    # - name: Languages
-    #   value: English, German
-
+    - name: Languages
+      value: English (Fluent), Mandarin (Native)
+      
 - title: Education
   type: time_table
   contents:
