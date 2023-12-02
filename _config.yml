@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Michael
-middle_name: L.
+middle_name:
 last_name: Chang
 email: contact@windsketch.cc
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -271,7 +271,7 @@ jekyll-minifier:
 scholar:
 
   last_name: [Chang]
-  first_name: [Michael, L.]
+  first_name: [Michael]
 
   style: apa
   locale: en
