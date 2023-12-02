@@ -5,7 +5,6 @@ description: Android app created to introduce photographers to new scenic spots
 importance: 1
 category: school
 img: assets/img/project_mapforphotographers.jpg
-redirect: https://github.com/civita/mapforphotographers
 ---
 
 #### Author
