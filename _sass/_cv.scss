@@ -53,13 +53,19 @@ i.iconinstitution {
   margin-right: 0.3rem;
 }
 
+i.iconcompany {
+  color: var(--global-theme-color);
+  font-size: 0.95rem;
+  margin-right: 0.3rem;
+}
+
 i.icondepartment {
   color: var(--global-theme-color);
   font-size: 0.8rem;
   margin-right: 0.3rem;
 }
 
-table.institution {
+table.institution, table.company {
   margin-bottom: 1rem;
 }
 
