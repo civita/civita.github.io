@@ -3,8 +3,6 @@
   contents:
     - name: Full Name
       value: Michael Chang
-    # - name: Date of Birth
-    #   value: 14th March 1879
     - name: Languages
       value: English (Fluent), Mandarin (Native)
       
@@ -19,19 +17,19 @@
         - title: Teaching Assistant
           contents:
             - Parallel Systems (2022 Fall)
-    - title: MSc in Computer Science
+    - title: MSc in Computer Science and Information Engineering
       institution: National Taiwan University
       year: 2018-2020
       description:
-        - GPA: 4.25/4.30
-        - Advisor: Tei-Wei Kuo and Chien-Chung Ho
+        - "GPA: 4.25/4.30"
+        - "Advisor: <a href="https://scholar.google.com/citations?user=gBuHlIQAAAAJ" target="_blank">Tei-Wei Kuo</a> and <a href="https://scholar.google.com.tw/citations?user=ESi9A4EAAAAJ&hl=zh-TW" target="_blank">Chien-Chung Ho</a>"
     - title: BSc in Computer Science
       institution: National Taiwan University
       year: 2013-2018
       description:
-        - GPA: 3.99/4.30
+        - "GPA: 3.99/4.30"
         - Minor in Computer Science and Information Engineering
-        - Presidential Award (top 5% of class): 3 semesters
+        - "Presidential Award (top 5% of class): 3 semesters"
         - title: Teaching Assistant
           contents:
             - Numerical Analysis and Programming (2016 Spring)
@@ -40,7 +38,7 @@
   type: time_table
   contents:
     - title: Software Engineer in Test (SET) Internship
-      institution: Oracle NetSuite
+      department: Oracle NetSuite
       year: Jan 2022 - Aug 2022
       description:
         - Developed and tested Enterprise Resource Planning (ERP), Customer Resource Management (CRM), and e-commerce web services in Java and TypeScript using IntelliJ IDEA.
@@ -52,7 +50,7 @@
         - Gained hands-on experience with testing methodologies, software development processes, and teamwork in a professional setting.
 
     - title: Full Stack Developer
-      institution: An-Hui Information Technology Co., Ltd
+      department: An-Hui Information Technology Co., Ltd
       year: Jul 2021 - Dec 2021
       description:
         - Developed a web RESTful API service for membership management, ordering and transaction with Golang and Gin framework.
@@ -61,7 +59,7 @@
         - Built and maintained Dockerized services for project management and monitoring systems such as Redmine, Grafana, and Prometheus.
 
     - title: Network Infrastructure Administrator
-      institution: Graduate Institute of Communication Engineering, National Taiwan University
+      department: Graduate Institute of Communication Engineering, National Taiwan University
       year: Oct 2018 - May 2020
       description:
         - Led the network administration team; monitored and maintained network switches, routers, firewall, and network-attached storage in the department.
@@ -94,4 +92,4 @@
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> <a href="https://www.behance.net/windsketch" target="_blank">Photography</a>, <a href="https://youtu.be/ST4cKbwhCWE" target="_blank">percussion</a>, and dispersed camping.
+    - <u>Hobbies:</u> <a href="https://www.behance.net/windsketch" target="_blank">Photography</a>, <a href="https://youtu.be/waXVrl16uoQ" target="_blank">percussion</a>, and dispersed camping.
