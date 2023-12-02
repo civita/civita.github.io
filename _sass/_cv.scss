@@ -47,13 +47,7 @@ i.iconlocation {
   font-size: 0.8rem;
 }
 
-i.iconinstitution {
-  color: var(--global-theme-color);
-  font-size: 0.95rem;
-  margin-right: 0.3rem;
-}
-
-i.iconcompany {
+i.iconinstitution, i.iconcompany {
   color: var(--global-theme-color);
   font-size: 0.95rem;
   margin-right: 0.3rem;
