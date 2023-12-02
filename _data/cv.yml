@@ -73,22 +73,13 @@
   contents:
     - title: Programming
       items: 
-        - Java
-        - Python
-        - Golang
-        - C++
-        - Javascript
+        - Java, Python, Golang, C++, Javascript
     - title: Backend
       items:
-        - Nginx
-        - SQL
+        - Nginx, SQL, Gin
     - title: Others
       items:
-        - Linux
-        - Docker
-        - git
-        - Bash script
-        - PyTorch
+        - Linux, Docker, git, Bash script, PyTorch
 
 - title: Other Interests
   type: list
