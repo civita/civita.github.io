@@ -21,6 +21,8 @@ Users are able to share their photos with a brief description. Once they're uplo
 
 Users can also browse photos shared by others, and like their photos. They can also search photos by either user name or camera setting. For example, if you only bring your ultra-wide camera lens while traveling, you could find photos by searching `16mm` in Dashboard.
 
+There're some Android apps that have similar features (Photo Maps, Mapbook), which allow users to locate photo on a map where photo was taken. However, they are basically for a single user, which means users cannot browse and be inspired by other users' photo.
+
 ## 2. Screenshots
 
 ### 2.1 Home
