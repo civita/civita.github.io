@@ -23,7 +23,6 @@ First, I played the SuperTuxKart ice hockey game on my Linux machine, to familia
         {% include figure.html path="https://i.imgur.com/ViMssX6.png" class="img-fluid z-depth-1" %}
     </div>
 </div>
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         Original given image
@@ -32,6 +31,7 @@ First, I played the SuperTuxKart ice hockey game on my Linux machine, to familia
         Heatmap of puck
     </div>
 </div>
+<br />
 
 ## Low-level Controller
 
@@ -41,9 +41,35 @@ The implemented low-level controller determines its action based on several scen
 
 To distinguish if it is the beginning of each round or not, I stored the pervious location of the kart and compared it to the current location (`kart.location`). If the distance is larger enough, new round is likely started. The importance of this part is that in the beginning the puck is too far to be noticed by merely the given image, and the kart cannot determine where to go. In my code of the controller, during the first 25 frames the kart always accelerates and use nitro if it is possible. After 25 frames, the puck is large enough and in front of the kart, the kart determines the action based on the following parts.
 
-| {% include figure.html path="https://i.imgur.com/Y29NwEB.png" class="img-fluid z-depth-1" %}  | {% include figure.html path="https://i.imgur.com/0grZXRp.png" class="img-fluid z-depth-1" %} | {% include figure.html path="https://i.imgur.com/P3pA45h.png" class="img-fluid z-depth-1" %}  | {% include figure.html path="https://i.imgur.com/PezEiII.png" class="img-fluid z-depth-1" %}  |
-| -------- | -------- | -------- | -------- |
-| Image frame 0 | Heatmap of puck     | Image frame 25 |  Heatmap of puck|
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="https://i.imgur.com/Y29NwEB.png" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="https://i.imgur.com/0grZXRp.png" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="https://i.imgur.com/P3pA45h.png" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="https://i.imgur.com/PezEiII.png" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        Image frame 0
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        Heatmap of puck
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        Image frame 25
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        Heatmap of puck
+    </div>
+</div>
+<br />
 
 ### 2. During the game
 
@@ -57,7 +83,7 @@ However, this strategy may have some issues. For example, the kart does not know
 
 If the kart is about to earn a point, the angle between the kart and two sides of that goal is calculated ($\theta$ and $\phi$). If the angle is too large (for example, the kart is facing wrong direction) then it will steer to another side. The facing direction is determined by the difference between `player_info.kart.front` and `player_info.kart.location`.
 
-{% include figure.html path="https://i.imgur.com/qL1DudY.jpg" class="img-fluid z-depth-1" %} 
+{% include figure.html path="https://i.imgur.com/F3HNMyz.jpeg" class="img-fluid z-depth-1" %} 
 
 ### 4. The kart faces wrong direction with the puck in front of it
 
