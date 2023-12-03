@@ -4,14 +4,14 @@ title: Indoor Rapid Wireless Attendance System
 description:  An efficient and swift solution for seamlessly managing and recording attendance in indoor settings through wireless technology
 importance: 3
 category: school
-img: assets/img/project_mapforphotographers-preview.gif
+img: assets/img/project_irwas-recognition.png
 ---
 
 ## Motivation and Problem Definition
 
 ### Motivation
 
-In large classrooms with hundreds of students, the process of taking attendance manually can be time-consuming, taking up valuable class time. Moreover, traditional methods, such as passing around a attendance sheet, are prone to issues like unauthorized sign-ins. To address these challenges, our final project aims to develop an indoor, rapid wireless attendance system using facial recognition.
+In large classrooms with hundreds of students, the process of taking attendance manually can be time-consuming, taking up valuable class time. Moreover, traditional methods, such as passing around a attendance sheet, are prone to issues like unauthorized sign-ins. To address these challenges, our project aims to develop an indoor, rapid wireless attendance system using facial recognition.
 
 ### Scenario of Use
 
@@ -35,7 +35,7 @@ Teachers may want to download the entire attendance sheet at the end of the seme
 
 ### Network Architecture
 
-![Network Architecture](images/network.png)
+{% include figure.html path="assets/img/project_irwas-network.png" width="700" class="img-fluid rounded z-depth-1" %}
 
 - **Camera and Server:** The camera communicates with the server through an API after successfully recognizing faces.
 - **User and Server:** Users access the web page using the HTTPS protocol.
@@ -123,10 +123,18 @@ Teachers may want to download the entire attendance sheet at the end of the seme
    - Sign in and out by passing through the camera at the entrance.
    - View attendance status on the course webpage.
 
+{% include figure.html path="assets/img/project_irwas-recognition.png" width="700" class="img-fluid rounded z-depth-1" %}
+
+
 2. **Teacher**
    - Log in to the system.
    - Manage courses, including updating course information and uploading student photos.
    - View and download attendance sheets.
+
+{% include figure.html path="assets/img/project_irwas-manage.png" width="700" class="img-fluid rounded z-depth-1" %}
+
+{% include figure.html path="assets/img/project_irwas-attendence.png" width="700" class="img-fluid rounded z-depth-1" %}
+
 
 ## Conclusion
 
