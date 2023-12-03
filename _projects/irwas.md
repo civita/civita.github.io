@@ -146,7 +146,3 @@ The developed indoor, rapid wireless attendance system aims to provide an effici
 - Explore the integration of the system with university databases for automatic student information updates.
 - Conduct further testing and optimization to enhance the accuracy and speed of facial recognition.
 - Develop a mobile application for convenient student and teacher interactions with the system.
-
----
-
-*This project report was prepared by [Your Name] and [Co-author's Name], Computer Network Lab, [Your University], [Date].*
