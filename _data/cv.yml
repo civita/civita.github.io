@@ -76,7 +76,7 @@
         - Java, Python, Golang, C++, Javascript
     - title: Backend
       items:
-        - Nginx, SQL, Gin
+        - Nginx, SQL, Gin, PHP
     - title: Others
       items:
         - Linux, Docker, git, Bash script, PyTorch
