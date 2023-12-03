@@ -39,29 +39,19 @@ To distinguish if it is the beginning of each round or not, I stored the perviou
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="https://i.imgur.com/Y29NwEB.png" class="img-fluid z-depth-1" %}
+        Image at 0
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="https://i.imgur.com/0grZXRp.png" class="img-fluid z-depth-1" %}
+        Heatmap of puck
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="https://i.imgur.com/P3pA45h.png" class="img-fluid z-depth-1" %}
+        Image at 25
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="https://i.imgur.com/PezEiII.png" class="img-fluid z-depth-1" %}
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        Image frame 0
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        Heatmap of puck
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        Image frame 25
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        Heatmap of puck
+        Heatmap of punk
     </div>
 </div>
 <br />
