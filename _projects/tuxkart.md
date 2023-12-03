@@ -66,7 +66,7 @@ However, this strategy may have some issues. For example, the kart does not know
 
 ### 3. The kart is close to the goal
 
-If the kart is about to earn a point, the angle between the kart and two sides of that goal is calculated ($\theta$ and $\phi$). If the angle is too large (for example, the kart is facing wrong direction) then it will steer to another side. The facing direction is determined by the difference between `player_info.kart.front` and `player_info.kart.location`.
+If the kart is about to earn a point, the angle between the kart and two sides of that goal is calculated (\\(\theta\\) and \\(\phi\\)). If the angle is too large (for example, the kart is facing wrong direction) then it will steer to another side. The facing direction is determined by the difference between `player_info.kart.front` and `player_info.kart.location`.
 
 {% include figure.html path="https://i.imgur.com/F3HNMyz.jpeg" class="img-fluid z-depth-1" %} 
 
