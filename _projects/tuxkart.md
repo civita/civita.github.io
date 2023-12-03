@@ -15,9 +15,23 @@ In this project, I implemented an agent that plays the [SuperTuxKart](https://su
 
 First, I played the SuperTuxKart ice hockey game on my Linux machine, to familiarize with the rules, methods of controlling, the size of the court and goals, and how the AI agents act during the game. Then I think I should implement an agent based on the *internal world states* first. The specific additional world state passed to my agent is the location (heatmap) of puck in each given image. This information can be retrieved via the object `render_data[i].instance` where `i` is the ID of the player. I wrote a low-level controller based on the original information (image, kart) and the location of puck (see below).
 
-| {% include figure.html path="https://i.imgur.com/IVNMteu.png" class="img-fluid z-depth-1" %} | {% include figure.html path="https://i.imgur.com/ViMssX6.png" class="img-fluid z-depth-1" %} |
-| -------- | -------- |
-| Original given image    | Heatmap of puck     |
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="https://i.imgur.com/IVNMteu.png" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="https://i.imgur.com/ViMssX6.png" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        Original given image
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        Heatmap of puck
+    </div>
+</div>
 
 ## Low-level Controller
 
