@@ -17,11 +17,11 @@ First, I played the SuperTuxKart ice hockey game on my Linux machine, to familia
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="https://i.imgur.com/IVNMteu.png" class="img-fluid z-depth-1" %}<br/>
+        {% include figure.html path="https://i.imgur.com/IVNMteu.png" class="img-fluid z-depth-1" %}
         Original given image
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="https://i.imgur.com/ViMssX6.png" class="img-fluid z-depth-1" %}<br/>
+        {% include figure.html path="https://i.imgur.com/ViMssX6.png" class="img-fluid z-depth-1" %}
         Heatmap of puck
     </div>
 </div>
