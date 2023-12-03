@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Map of Photographers
-description: An Android app created to introduce photographers to new scenic spots
+description: A photography-oriented Android app crafted to guide users to discover novel and scenic destinations
 importance: 1
 category: school
 img: assets/img/project_mapforphotographers-preview.gif
