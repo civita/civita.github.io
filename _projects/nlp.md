@@ -19,8 +19,9 @@ toc:
   - name: Abstract
   - name: Introduction
   - name: Background and Motivation
-       - name: Pre-training Methods
-       - name: Adversarial Examples
+    subsections:
+      - name: Pre-training Methods
+      - name: Adversarial Examples
   - name: Proposed Ideas 
        - name: Learning from Adversarial Examples
        - name: Slightly Modified Adversarial Examples
