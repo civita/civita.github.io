@@ -5,7 +5,7 @@ description: An approach addressing dataset artifacts by focusing on adversarial
 importance: 1
 category: school
 date: 2022-12-01
-img: assets/img/project_mapforphotographers-preview.gif
+img: assets/img/project_nlp-1.png
 
 authors:
   - name: Michael Chang
@@ -30,6 +30,7 @@ toc:
 ---
 
 ## Abstract
+
 This paper proposes ideas dealing with dataset artifacts from Stanford Question Answering Dataset (SQuAD). With adversarial examples, results showed that many state-of-the-art NLP models had significantly F1 score drops. Methods like retraining on the challenging set seem possible; however, it has over-fitting issues. Here we focus on the characteristics of adversarial examples and provide an intuitive idea to reconstruct the paragraphs for reading comprehension based question answering. Evaluations are conducted based on several trained models and datasets, demonstrating the F1 gain from $2.17\%$ to $9.36\%$ based on different challenging datasets.
 
 ## Introduction
@@ -129,7 +130,6 @@ Interestingly, our proposed model also has a better F1 performance on the modifi
 
 Furthermore, we tried to evaluate our model on another set of adversarial examples, *adversarialQA*, which applied a different approach to generating sentences <d-cite key="bartolo2020beat"/>. The F1 is $28.06\%$ on our proposed model, compared to $25.89\%$ on *SQuAD-alone*. We also trained the third model, which is based on the ELECTRA-Small model as well, with the union of the original *AddSent* and SQuAD training data, named *SQuAD+AddSent*. The overall results are listed in Table [4](#tab-4). Overall, our proposed model gets slightly better results among the three models.
 
-
 | Model                | F1     |
 |----------------------|--------|
 | SQuAD-alone          | 25.89% |
@@ -138,8 +138,6 @@ Furthermore, we tried to evaluate our model on another set of adversarial exampl
 <div class="caption" name="tab-4">
     F1 results on another adversarial examples, *adversarialQA* <d-cite key="bartolo2020beat"/>. Note that model *SQuAD+AddSent* trained on the *AddSent* dataset proposed by  <d-cite key="jia2017adversarial"/>.
 </div>
-
-
 
 ## Conclusion
 
