@@ -5,7 +5,7 @@ description: An approach addressing dataset artifacts by focusing on adversarial
 importance: 1
 category: school
 date: 2022-12-01
-img: assets/img/project_nlp-1.png
+img: assets/img/project_nlp-preview.png
 
 authors:
   - name: Michael Chang
@@ -80,7 +80,7 @@ There are various methods to deal with dataset artifacts, including training on 
 To find out a way to train the model with augmented data without over-fitting, we slightly modified the adversarial examples. As the authors stated that "the decision to always append `s` to the end of `p` is somewhat arbitrary" <d-cite key="jia2017adversarial"/>, we came up with an idea to randomize the locations of inserted sentences, in order to make the dataset more generalized. To be more precise, the distracting sentences are inserted to index $(0, n]$ given that there are $n$ sentences in the paragraph (the index starts from zero).
 
 <a name="fig-2"></a>
-{% include figure.html path="assets/img/project_nlp-2.png" width="400" class="img-fluid z-depth-1" %}
+{% include figure.html path="assets/img/project_nlp-2.png" max-width="400" class="img-fluid z-depth-1" %}
 <div class="caption">
     Figure 2: An example of the proposed idea that randomizes the locations of inserted sentences.
 </div>
@@ -121,7 +121,7 @@ For training models, we use HuggingFace's `transformers` Python library <d-cite 
 
 We first compared the results evaluated on the original SQuAD validation set; the proposed model has $85.07\%$ F1, which is very close to the control ($85.04\%$). This is expected since that the original SQuAD validation set is not an adversarial one, so our model should not perform either better or worse.
 
-Next, we evaluated both models on three validation sets, listed in Table [2](#tab-3). In *AddSent* validation set, the model trained on the proposed dataset has a better F1 result as expected because there are conditions that the inserted sentence is at the end of the paragraph (as discussed in Section <d-cite key="3.2"/>).
+Next, we evaluated both models on three validation sets, listed in Table [2](#tab-3). In *AddSent* validation set, the model trained on the proposed dataset has a better F1 result as expected because there are conditions that the inserted sentence is at the end of the paragraph (as discussed in previous subsection).
 
 Interestingly, our proposed model also has a better F1 performance on the modified validation set (referring to *Randomized AddSent* in Table [2](#tab-3)). This indicates that our trained model does not just discard the last sentence.
 
