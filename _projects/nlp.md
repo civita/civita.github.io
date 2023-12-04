@@ -5,7 +5,6 @@ description: An approach addressing dataset artifacts by focusing on adversarial
 importance: 1
 category: school
 date: 2022-12-01
-featured: true
 img: assets/img/project_mapforphotographers-preview.gif
 
 authors:
@@ -43,7 +42,14 @@ We explore one of the NLP tasks, reading comprehension based question answering 
 
 Recently, pre-trained text encoders have shown great improvement for NLP tasks. For example, masked language modeling (MLM) pre-training methods such as BERT <d-cite key="devlin-etal-2019-bert"/> and models based on it replaces some tokens in texts and reconstructs them by training. However, these MLM-based models have high computational costs and low sample efficiency because only 15% of tokens are learned per example. Alternatively, ELECTRA <d-cite key="clark2020electra"/> proposed a new sample-efficient pre-training task by replacing some tokens with samples from a proposal distribution. With the same computational costs (pre-train FLOPs), ELECTRA-Small (compact version of ELECTRA) outperforms a small BERT model by 5 points on GLUE benchmark <d-cite key="wang2019glue"/>. Throughout this paper, we will use ELECTRA-Small as the base model and fine-tune on it.
 
-![An example from SQuAD dataset with an additional adversarial distracting sentence](assets/squad_adversarial_example.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_nlp-1.png" width="700" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption" name="fig-1">
+    Figure 1: An example from SQuAD dataset with an additional adversarial distracting sentence.
+</div>
 
 ### Adversarial Examples
 
@@ -59,12 +65,22 @@ Evaluation results show that F1 drops from 85.04% to 57.99% after adding adversa
 
 In the next section, we will focus on this dataset and propose an idea to improve the above-mentioned issue. Then several evaluations are performed to support the proposed idea.
 
-![An example of the proposed idea that randomizes the locations of inserted sentences](assets/squad_adversarial_random_example.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_nlp-2.png" width="700" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption" name="fig-2">
+    Figure 2: An example of the proposed idea that randomizes the locations of inserted sentences.
+</div>
 
 | Model trained on \ Dataset    | SQuAD  | AddSent | Randomized AddSent |
 |------------------------------|--------|---------|---------------------|
-| SQuAD-alone                  | 85.04% | 57.99%  | 53.04%              |
-| SQuAD+AddSentRnd             | 85.07% | 83.88%  | 62.40%              |
+| *SQuAD-alone*                  | 85.04% | 57.99%  | 53.04%              |
+| *SQuAD+AddSentRnd*             | 85.07% | 83.88%  | **62.40%**              |
+<div class="caption" name="tab-1">
+    Table 1: F1 results without and with adversarial examples. Here *AddSent* represents dataset with additional distracting sentences.
+</div>
 
 ## Proposed Ideas
 
@@ -82,16 +98,18 @@ However, there exists one exception: if there is only one sentence, the inserted
 
 | Model                         | F1     |
 |-------------------------------|--------|
-| SQuAD-alone                   | 85.04% |
-| SQuAD+AddSentRnd              | 28.06% |
-| SQuAD+AddSent                 | 25.12% |
-
+| *SQuAD-alone*                   | 85.04% |
+| *SQuAD+AddSentRnd*              | **28.06%** |
+| *SQuAD+AddSent*                 | 25.12% |
+<div class="caption" name="tab-2">
+    Table 2: F1 results on SQuAD validation set, original *AddSent* validation set, and randomized (proposed) *AddSent* validation set.
+</div>
 
 ## Results
 
-Based on the proposed idea in Section <d-cite key="3.2"/>, we trained the ELECTRA-Small model on the union of modified examples and original SQuAD training data, named *SQuAD+AddSentRnd* in the following discussion. As a control, we trained another ELECTRA-Small model only on the SQuAD alone, named *SQuAD-alone*.
+Based on the proposed idea in previous subsection, we trained the ELECTRA-Small model on the union of modified examples and original SQuAD training data, named *SQuAD+AddSentRnd* in the following discussion. As a control, we trained another ELECTRA-Small model only on the SQuAD alone, named *SQuAD-alone*.
 
-For training models, we use HuggingFace's `transformers` Python library <d-cite key="wolf2020huggingfaces"/> on NVIDIA GeForce RTX 3090 with the parameters listed in Table \ref{parameters}. The training / validation sets of the modified dataset are split manually, with a size of $3,236$ and $324$ pairs of QA, respectively.
+For training models, we use HuggingFace's `transformers` Python library <d-cite key="wolf2020huggingfaces"/> on NVIDIA GeForce RTX 3090 with the parameters listed in Table [3](#tab-3). The training / validation sets of the modified dataset are split manually, with a size of $3,236$ and $324$ pairs of QA, respectively.
 
 | Parameter               | Value   |
 |-------------------------|---------|
@@ -99,22 +117,30 @@ For training models, we use HuggingFace's `transformers` Python library <d-cite 
 | Batch size              | 64      |
 | Maximum sequence length | 128     |
 | Number of processes     | 2       |
+<div class="caption" name="tab-3">
+    Table 3: Training parameters. Unlisted parameters are set to Huggingface default.
+</div>
 
 We first compared the results evaluated on the original SQuAD validation set; the proposed model has $85.07\%$ F1, which is very close to the control ($85.04\%$). This is expected since that the original SQuAD validation set is not an adversarial one, so our model should not perform either better or worse.
 
-Next, we evaluated both models on three validation sets, listed in Table \ref{results}. In *AddSent* validation set, the model trained on the proposed dataset has a better F1 result as expected because there are conditions that the inserted sentence is at the end of the paragraph (as discussed in Section <d-cite key="3.2"/>).
+Next, we evaluated both models on three validation sets, listed in Table [2](#tab-2). In *AddSent* validation set, the model trained on the proposed dataset has a better F1 result as expected because there are conditions that the inserted sentence is at the end of the paragraph (as discussed in Section <d-cite key="3.2"/>).
 
-Interestingly, our proposed model also has a better F1 performance on the modified validation set (referring to *Randomized AddSent* in Table \ref{results}). This indicates that our trained model does not just discard the last sentence.
+Interestingly, our proposed model also has a better F1 performance on the modified validation set (referring to *Randomized AddSent* in Table [2](#tab-2)). This indicates that our trained model does not just discard the last sentence.
 
-Furthermore, we tried to evaluate our model on another set of adversarial examples, *adversarialQA*, which applied a different approach to generating sentences <d-cite key="bartolo2020beat"/>. The F1 is $28.06\%$ on our proposed model, compared to $25.89\%$ on *SQuAD-alone*. We also trained the third model, which is based on the ELECTRA-Small model as well, with the union of the original *AddSent* and SQuAD training data, named *SQuAD+AddSent*. The overall results are listed in Table \ref{adversarialQA}. Overall, our proposed model gets slightly better results among the three models.
+Furthermore, we tried to evaluate our model on another set of adversarial examples, *adversarialQA*, which applied a different approach to generating sentences <d-cite key="bartolo2020beat"/>. The F1 is $28.06\%$ on our proposed model, compared to $25.89\%$ on *SQuAD-alone*. We also trained the third model, which is based on the ELECTRA-Small model as well, with the union of the original *AddSent* and SQuAD training data, named *SQuAD+AddSent*. The overall results are listed in Table [4](#tab-4). Overall, our proposed model gets slightly better results among the three models.
 
 
 | Model                | F1     |
 |----------------------|--------|
 | SQuAD-alone          | 25.89% |
-| SQuAD+AddSentRnd     | 28.06% |
+| SQuAD+AddSentRnd     | **28.06%** |
 | SQuAD+AddSent        | 25.12% |
+<div class="caption" name="tab-4">
+    F1 results on another adversarial examples, *adversarialQA* <d-cite key="bartolo2020beat"/>. Note that model *SQuAD+AddSent* trained on the *AddSent* dataset proposed by  <d-cite key="jia2017adversarial"/>.
+</div>
+
+
 
 ## Conclusion
 
-In Section 4, it shows that our proposed model has around 9.36% F1 improvement on the modified adversarial dataset, and around 2.17% on `adversarialQA` dataset. Note that our idea is rather intuitive and there is not much work on fine-tuning models. Future work includes comprehensive analysis on more adversarial examples <d-cite key="wang2018robust"/> and other approaches like Dataset cartography <d-cite key="swayamdipta2020dataset"/> and Contrastive training <d-cite key="dua2021learning"/>. Besides, we would like to find a more generalized approach that can also be applied to natural language inference problems.
+It shows that our proposed model has around 9.36% F1 improvement on the modified adversarial dataset, and around 2.17% on `adversarialQA` dataset. Note that our idea is rather intuitive and there is not much work on fine-tuning models. Future work includes comprehensive analysis on more adversarial examples <d-cite key="wang2018robust"/> and other approaches like Dataset cartography <d-cite key="swayamdipta2020dataset"/> and Contrastive training <d-cite key="dua2021learning"/>. Besides, we would like to find a more generalized approach that can also be applied to natural language inference problems.
