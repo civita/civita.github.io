@@ -45,7 +45,7 @@ Recently, pre-trained text encoders have shown great improvement for NLP tasks. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_nlp-1.png" width="700" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_nlp-1.png" width="500" class="img-fluid z-depth-1" %}
     </div>
 </div>
 <div class="caption" name="fig-1">
@@ -72,7 +72,7 @@ In the next section, we will focus on this dataset and propose an idea to improv
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_nlp-2.png" width="700" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_nlp-2.png" width="500" class="img-fluid z-depth-1" %}
     </div>
 </div>
 <div class="caption" name="fig-2">
