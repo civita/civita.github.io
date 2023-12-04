@@ -49,12 +49,12 @@ Although pre-trained models achieve high F1 performance on NLP datasets from eit
 
 <a name="fig-1"></a>
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-3 mt-3 mt-md-0">
     </div>
-    <div class="col-sm mt-6 mt-md-0">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/project_nlp-1.png" width="400" class="img-fluid z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-3 mt-3 mt-md-0">
     </div>
 </div>
 <div class="caption">
@@ -89,12 +89,12 @@ To find out a way to train the model with augmented data without over-fitting, w
 
 <a name="fig-2"></a>
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-3 mt-3 mt-md-0">
     </div>
-    <div class="col-sm mt-6 mt-md-0">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.html path="assets/img/project_nlp-2.png" width="400" class="img-fluid z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-3 mt-3 mt-md-0">
     </div>
 </div><div class="caption">
     Figure 2: An example of the proposed idea that randomizes the locations of inserted sentences.
