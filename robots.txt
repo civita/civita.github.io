@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://civita.github.io/sitemap.xml
+Sitemap: https://me.windsketch.cc/sitemap.xml
