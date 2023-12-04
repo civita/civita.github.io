@@ -62,6 +62,10 @@ In this paper, one of the famous question answering datasets, Stanford Question 
 |------------------------------|--------|---------|
 | ELECTRA-Small                | 85.04% | 57.99%  |
 
+<div class="caption" name="tab-1">
+    Table 1: F1 results without and with adversarial examples. Here *AddSent* represents dataset with additional distracting sentences.
+</div>
+
 Evaluation results show that F1 drops from 85.04% to 57.99% after adding adversarial sentences (Table [1](#tab-1)). Reasons for model failures, proposed by the author of adversarial examples, are that models cannot learn very well in long-distance relationships between parts of the paragraph, so they fail to locate pieces of evidence that support correct answers. In addition, models have worse performance as the length of questions increases. This is due to the way they generated distracting sentences: sentences are generated based on the questions with the replacement of at least one word. If it is a long question, the distracting sentence tends to have many common words with the question.
 
 In the next section, we will focus on this dataset and propose an idea to improve the above-mentioned issue. Then several evaluations are performed to support the proposed idea.
@@ -79,8 +83,9 @@ In the next section, we will focus on this dataset and propose an idea to improv
 |------------------------------|--------|---------|---------------------|
 | *SQuAD-alone*                  | 85.04% | 57.99%  | 53.04%              |
 | *SQuAD+AddSentRnd*             | 85.07% | 83.88%  | **62.40%**              |
-<div class="caption" name="tab-1">
-    Table 1: F1 results without and with adversarial examples. Here *AddSent* represents dataset with additional distracting sentences.
+
+<div class="caption" name="tab-2">
+    Table 2: F1 results on SQuAD validation set, original *AddSent* validation set, and randomized (proposed) *AddSent* validation set.
 </div>
 
 ## Proposed Ideas
@@ -97,15 +102,6 @@ Note that here sentences are never inserted at the beginning of the paragraph du
 
 However, there exists one exception: if there is only one sentence, the inserted one will still be the end of contexts, given the constraint that the inserted one cannot locate in the beginning.
 
-| Model                         | F1     |
-|-------------------------------|--------|
-| *SQuAD-alone*                   | 85.04% |
-| *SQuAD+AddSentRnd*              | **28.06%** |
-| *SQuAD+AddSent*                 | 25.12% |
-<div class="caption" name="tab-2">
-    Table 2: F1 results on SQuAD validation set, original *AddSent* validation set, and randomized (proposed) *AddSent* validation set.
-</div>
-
 ## Results
 
 Based on the proposed idea in previous subsection, we trained the ELECTRA-Small model on the union of modified examples and original SQuAD training data, named *SQuAD+AddSentRnd* in the following discussion. As a control, we trained another ELECTRA-Small model only on the SQuAD alone, named *SQuAD-alone*.
@@ -118,6 +114,7 @@ For training models, we use HuggingFace's `transformers` Python library <d-cite 
 | Batch size              | 64      |
 | Maximum sequence length | 128     |
 | Number of processes     | 2       |
+
 <div class="caption" name="tab-3">
     Table 3: Training parameters. Unlisted parameters are set to Huggingface default.
 </div>
@@ -135,8 +132,9 @@ Furthermore, we tried to evaluate our model on another set of adversarial exampl
 | SQuAD-alone          | 25.89% |
 | SQuAD+AddSentRnd     | **28.06%** |
 | SQuAD+AddSent        | 25.12% |
+
 <div class="caption" name="tab-4">
-    F1 results on another adversarial examples, *adversarialQA* <d-cite key="bartolo2020beat"/>. Note that model *SQuAD+AddSent* trained on the *AddSent* dataset proposed by  <d-cite key="jia2017adversarial"/>.
+    Table 4: F1 results on another adversarial examples, *adversarialQA* <d-cite key="bartolo2020beat"/>. Note that model *SQuAD+AddSent* trained on the *AddSent* dataset proposed by <d-cite key="jia2017adversarial"/>.
 </div>
 
 ## Conclusion
