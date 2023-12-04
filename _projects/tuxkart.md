@@ -51,7 +51,7 @@ To distinguish if it is the beginning of each round or not, I stored the perviou
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="https://i.imgur.com/PezEiII.png" class="img-fluid z-depth-1" %}
-        Heatmap of punk
+        Heatmap of puck
     </div>
 </div>
 <br />
