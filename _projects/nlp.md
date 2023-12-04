@@ -48,7 +48,15 @@ Recently, pre-trained text encoders have shown great improvement for NLP tasks. 
 Although pre-trained models achieve high F1 performance on NLP datasets from either natural language inference (NLI) or question answering (QA), the extent to which these systems truly comprehend human language is still unclear. By learning spurious correlations in datasets, known as dataset artifacts, the models are supposed to fail where these artifacts no longer exist. Examples like evaluating the model via contrast sets <d-cite key="gardner2020evaluating"/> or adversarial examples <d-cite key="glockner2018breaking"/><d-cite key="wallace2021universal"/> showed significant F1 drops. These results imply that we should re-examine the datasets and develop new models which understand language more precisely.
 
 <a name="fig-1"></a>
-{% include figure.html path="assets/img/project_nlp-1.png" width="400" class="img-fluid z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+    </div>
+    <div class="col-sm mt-6 mt-md-0">
+        {% include figure.html path="assets/img/project_nlp-1.png" width="400" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+    </div>
+</div>
 <div class="caption">
     Figure 1: An example from SQuAD dataset with an additional adversarial distracting sentence.
 </div>
@@ -80,8 +88,15 @@ There are various methods to deal with dataset artifacts, including training on 
 To find out a way to train the model with augmented data without over-fitting, we slightly modified the adversarial examples. As the authors stated that "the decision to always append `s` to the end of `p` is somewhat arbitrary" <d-cite key="jia2017adversarial"/>, we came up with an idea to randomize the locations of inserted sentences, in order to make the dataset more generalized. To be more precise, the distracting sentences are inserted to index $$(0, n]$$ given that there are $$n$$ sentences in the paragraph (the index starts from zero).
 
 <a name="fig-2"></a>
-{% include figure.html path="assets/img/project_nlp-2.png" max-width="400" class="img-fluid z-depth-1" %}
-<div class="caption">
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+    </div>
+    <div class="col-sm mt-6 mt-md-0">
+        {% include figure.html path="assets/img/project_nlp-2.png" width="400" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+    </div>
+</div><div class="caption">
     Figure 2: An example of the proposed idea that randomizes the locations of inserted sentences.
 </div>
 
