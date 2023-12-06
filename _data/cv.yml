@@ -71,10 +71,10 @@
 - title: Technical Skills
   type: nested_list
   contents:
-    - title: Programming Languages and IDEs
+    - title: Programming Languages & IDEs
       items: 
         - Java, Go, Python, HTML/CSS, JavaScript, SQL, PHP, Bash, LaTeX, VS Code, IntelliJ IDEA
-    - title: Technologies and Frameworks
+    - title: Technologies & Frameworks
       items:
         - Linux, Git, Perforce, TeamCity, Docker, PyTorch, HuggingFace
     - title: Others
