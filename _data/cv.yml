@@ -16,7 +16,7 @@
         - 'GPA: 3.97/4.00'
         - title: Teaching Assistant
           contents:
-            - Parallel Systems (2022 Fall)
+            - Parallel Systems (Fall 2022)
     - title: MSc in Computer Science and Information Engineering
       institution: National Taiwan University
       year: 2018-2020
@@ -30,11 +30,11 @@
       description:
         - 'GPA: 3.99/4.30'
         - Minor in Computer Science and Information Engineering
-        - 'Presidential Award (top 5% of class): 3 semesters'
-        - President of National Tawian University Symphony Orchestra (2015 Fall)
+        - 'Recipient of the Presidential Award (ranking in the top 5% of the class) for 3 semesters '
+        - President of National Tawian University Symphony Orchestra (Fall 2015)
         - title: Teaching Assistant
           contents:
-            - Numerical Analysis and Programming (2016 Spring)
+            - Numerical Analysis and Programming (Spring 2016)
         
 - title: Work Experience
   type: time_table
@@ -43,43 +43,43 @@
       company: Oracle NetSuite
       year: Jan 2022 - Aug 2022
       description:
-        - Developed and tested Enterprise Resource Planning, Customer Resource Management, and e-commerce web services in Java and TypeScript.
-        - Composed test plans for unit tests, metadata repository tests, and full-stack tests, achieving an average code coverage of above 90%.
-        - Demonstrated proficiency in writing queries for the Oracle Database schema and garnered experience in RESTful API testing and OAuth with Postman.
-        - Collaborated with other teams using Perforce and Git for version control and code maintenance.
-        - Attained proficiency in Jira and Confluence while working in a dynamic Agile environment, actively engaging in daily Scrum meetings to enhance collaboration and productivity.
-        - Participated in a Hackathon 4Good event, which involved creating NetSuite ERP solutions to support nonprofit customers.
+        - Developed, tested, and maintained Java/TypeScript ERP web services, showcasing Oracle Database query proficiency.
+        - Composed test plans and test codes for various types of tests, achieving an average code coverage of above 90%.
+        - Gained hands-on experience in RESTful API testing and OAuth 2.0 authentication using Postman API Platform.
+        - Acquired expertise in JetBrains TeamCity, effectively navigating the tool and understanding CI/CD workflows to pinpoint build and integration test failures.
+        - Attained proficiency in Jira and Confluence while working in a dynamic Agile environment, participating in daily Scrum meetings to enhance collaboration and productivity.
+        - Participated in a Hackathon 4Good event, providing NetSuite ERP solutions to support nonprofit customers.
  
     - title: Full Stack Developer
       company: An-Hui Information Technology Co., Ltd
       year: Jul 2021 - Dec 2021
       description:
-        - Developed a web RESTful API service for membership management, ordering and transaction with Golang and Gin framework.
-        - Simplified and automatically generated interactive API documents in swagger format.
-        - Developed company website with Golang and Hugo framework, and hosted it on virtual private server.
-        - Built and maintained Dockerized services for project management and monitoring systems such as Redmine, Grafana, and Prometheus.
+        - Developed a RESTful API service in Go and Gin framework for membership management, ordering and transaction.
+        - Streamlined the procedure for automatically generating interactive API documents in Swagger format.
+        - Collaborated with team members using version control systems such as Git to organize modifications and assign tasks.
+        - Developed company website with Golang and Hugo framework, hosted on Amazon VPS.
+        - Built and managed Docker services for project management and monitoring systems, including Redmine, Grafana, and Prometheus.
 
     - title: Network Infrastructure Administrator
       company: Graduate Institute of Communication Engineering, National Taiwan University
-      year: Oct 2018 - May 2020
+      year: Sep 2018 - Jun 2020
       description:
-        - Led the network administration team; monitored and maintained network switches, routers, firewall, and network-attached storage in the department.
-        - Effectively utilized Wireshark and TCPdump to identify and resolve network-related issues, ensuring optimal system performance.
-        - Developed online thesis submission system with PHP and JavaScript.
+        - Led the network administration team, managing maintenance for switches, firewall, routers, and NAS.
+        - Developed PHP/JavaScript web applications, including Master's program application and online thesis submission systems for 1000+ applicants and students.
         - Provided technical support for computer hardware, servers, virtual machines, and Windows applications.
 
 - title: Technical Skills
   type: nested_list
   contents:
-    - title: Programming
+    - title: Programming Languages/IDEs
       items: 
-        - Java, Python, Golang, C++, Javascript
-    - title: Backend
+        - Java, Go, Python, HTML/CSS, JavaScript, SQL, PHP, Bash, LaTeX, VS Code, IntelliJ IDEA
+    - title: Technologies/Frameworks
       items:
-        - Nginx, SQL, Gin, PHP
+        - Linux, Git, Perforce, TeamCity, Docker, PyTorch, HuggingFace
     - title: Others
       items:
-        - Linux, Docker, git, Bash script, PyTorch
+        - Agile methodology, Scrum, Jira, Confluence
 
 - title: Other Interests
   type: list
