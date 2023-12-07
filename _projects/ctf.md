@@ -115,23 +115,23 @@ Fortunately, `0x601010` is located in writable section as the screenshot shows.
 
 To know the parameters that we can use with `printf` and `%n`, I set the breakpoint on `0x40077b`, where `dprintf` is called.
 {% include figure.html path="https://i.imgur.com/1JhDioF.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-I used `gdb` again, and the following picture indicates the parameters on the stack. The parameters from $5^{th}$ start at `$rsp`.
+I used `gdb` again, and the following picture indicates the parameters on the stack. The parameters from $$5^{th}$$ start at `$rsp`.
 {% include figure.html path="https://i.imgur.com/iLQBp4g.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-For example, the $10^{th}$ parameter is `0x7ffff7a05b97`. Note that this is *the pointer* pointed to `libc_start_main`, which we will use to *leak* `libc_base` later.
+For example, the $$10^{th}$$ parameter is `0x7ffff7a05b97`. Note that this is *the pointer* pointed to `libc_start_main`, which we will use to *leak* `libc_base` later.
 {% include figure.html path="https://i.imgur.com/ROgwHwT.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
 - **Step 0x03**
 
 {% include figure.html path="https://i.imgur.com/HNALuBR.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-I found that the $18^{th}$ parameter points to the address of the $37^{th}$ parameter. From the `vmmap`, we know that the `stack` is writable. I will use these two address to alter the `fd` of the `dprintf`:
+I found that the $$18^{th}$$ parameter points to the address of the $$37^{th}$$ parameter. From the `vmmap`, we know that the `stack` is writable. I will use these two address to alter the `fd` of the `dprintf`:
     - Because `0x601010` = 6295568, my payload is `%6295568c%18$n`.
     - After sending that, I made my script to sleep 5 seconds, in order to make sure the printing process in remote side is properly done.
-    - Finally, the $37^{th}$ parameter is changed into `0x601010`, and I used `%1c%37$hhn` to *overwrite* the file descriptor from `2` to `1`, which is `stdout`.
+    - Finally, the $$37^{th}$$ parameter is changed into `0x601010`, and I used `%1c%37$hhn` to *overwrite* the file descriptor from `2` to `1`, which is `stdout`.
 
 - **Step 0x04**
 
 Now we can focus on getting the shell. Here we have some clues:
-    1. From `vmmap` and the address of `libc_start_main` ($10^{th}$ parameter) , we can calculate the `offset` to the `libc_base`. Take the screenshots above for example, the offset is `0x7ffff7a05b97` - `0x7ffff79e4000` = **`0x21b97`**, which is a fixed value regardless of the randomization of the base.
+    1. From `vmmap` and the address of `libc_start_main`  $$10^{th}$$ parameter) , we can calculate the `offset` to the `libc_base`. Take the screenshots above for example, the offset is `0x7ffff7a05b97` - `0x7ffff79e4000` = **`0x21b97`**, which is a fixed value regardless of the randomization of the base.
     2. With `one_gadget`, we have three candidates as the following snapshot shows.
 {% include figure.html path="https://i.imgur.com/cegDTi7.png" max-width="700" class="img-fluid rounded z-depth-1" %}
     3. Because of the constraints, I choose `0x10a38c` as my *gadget*. Therefore the address of the gadget is `address of (libc_start_main+231)` - `0x21b97` + `0x10a38c`
@@ -141,16 +141,16 @@ Now we can focus on getting the shell. Here we have some clues:
 Because x64 address is `8 bytes`, and we are restricted to write as large as `4 bytes` at each input via `%n`, we have to split our inputs into small pieces via `%hn` and `%hhn`.
 {% include figure.html path="https://i.imgur.com/ZG0BRCd.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 My strategies are:
-    1. Make $7^{th}$ point to $12^{nd}$ via `%232c%5$hhn` because `0xe8 = 232`.
-    2. Make $12^{nd}$ point to $10^{th}$ via `%216c%7$hhn` because `0xd8 = 216`.
-    3. Make $10^{th}$ point to address of `one_gadget` via 
+    1. Make $$7^{th}$$ point to $$12^{nd}$$ via `%232c%5$hhn` because `0xe8 = 232`.
+    2. Make $$12^{nd}$$ point to $$10^{th}$$ via `%216c%7$hhn` because `0xd8 = 216`.
+    3. Make $$10^{th}$$ point to address of `one_gadget` via 
         - `%(gadget_addr % 0x10000)c%12$hn`, and
         - `%((gadget_addr >> 0x10)% 0x10000)c%12$hn` after `%218c%7$hhn`.
 
 - **Step 0x06**
 
 Therefore, after the echo ends, the process will not `ret` to `libc_start_main`. Instead, it will go to our `one_gadget`, and we are able to *get the shell* and the flag as well.
-In my script, I *restored* $7^{th}$ parameter into the initial value to avoid *segmentation fault* when the stack *pops*.
+In my script, I *restored* $$7^{th}$$ parameter into the initial value to avoid *segmentation fault* when the stack *pops*.
 {% include figure.html path="https://i.imgur.com/pNvU9qu.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
 --- 
