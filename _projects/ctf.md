@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Capture The Flag Challenges
-description: Write-ups of my approaches to solving various CTF challenges, including HITCON CTF 2018.
+description: Write-ups of my approaches to solving various CTF challenges, including HITCON CTF 2018
 importance: 4
 category: school
 img: https://i.imgur.com/ZG0BRCd.png
