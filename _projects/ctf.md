@@ -161,21 +161,20 @@ By doing some analysis and trail-and-error, I made this mapping table. Note that
 First, the source code is provided. There are `_GET` actions such as `upload`, `getsize`, `modify`, and `delete` which can be used.
 There is a `php` class named `FileManager`, which comes up with some *magic functions*.
 - **Step 0x01**
-From the slide in the class, we knew that the `php` magic functions will be invoked after specific actions are called. For example, `__destruct()` will be invoked when the object is being destroyed.
+We knew that the `php` magic functions will be invoked after specific actions are called. For example, `__destruct()` will be invoked when the object is being destroyed.
 Moreover, with `phar://` protocol, the metadata inside will be unserialized. With these two ideas, we can come up with a workflow, which is shown below, to exploit and do the RCE (remote code execution).
-```flow
-st=>start: Create a phar file,
-whose metadata contains modified FileManager class
-e=>end: 結束
-op=>operation: Concatenate 'GIF89a' with phar to make a fake GIF
-op2=>operation: Upload to remote by calling 'upload'
-op3=>operation: Upload an evil php with __destruct(),
-by calling 'getsize'
-op4=>operation: Utilize php system($_GET[1]) in my evil php file,
-to do the RCE (find the flag in the remote)
-end=>end: Capture the flag
-st->op->op2->op3->op4->end
+
+```mermaid
+flowchart
+    n1(["Create a phar file, \nwhose metadata contains modified FileManager class
+"])
+	n1 --> n3["Concatenate 'GIF89a' with phar to make a fake GIF"]
+	n3 --> n2["Upload to remote by calling 'upload'\n"]
+	n2 --> n4["Upload an evil php with __destruct(),by calling 'getsize'\n"]
+	n4 --> n5["Utilize php system($_GET[1]) in my evil php file,to do the RCE (find the flag in the remote)\n"]
+	n5 -->n6(["Capture the flag\n"])
 ```
+
 - **Step 0x02**
 {% include figure.html path="https://i.imgur.com/mgupIrw.png" max-width="700" class="img-fluid rounded z-depth-1" %}
     - The function `__destruct()` in class `FileManager` is    vulnerable becuase when it is called and the `mode` is `upload`, we can upload everything with arbitrary extension other than `.gif`. To do the RCE, this is essential. For example, we can upload a `php` file with `system` function inside via this vulnerability.
