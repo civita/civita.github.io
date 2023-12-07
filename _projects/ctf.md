@@ -65,6 +65,7 @@ And the ROP chain is now:
 | `0xc420047f88`	 | `0xc420047f98`	|
 | `0xc420047f90`	 | `0x44f609`   |
 | `0xc420047f98`	 | '/bin/sh'   |
+
 Note that in the script, I use `p64()` to handle the addresses.
 
 - **Step 0x04**
@@ -125,10 +126,10 @@ For example, the $$10^{th}$$ parameter is `0x7ffff7a05b97`. Note that this is *t
 
 {% include figure.html path="https://i.imgur.com/HNALuBR.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-I found that the $$18^{th}$$ parameter points to the address of the $$37^{th}$$ parameter. From the `vmmap`, we know that the `stack` is writable. I will use these two address to alter the `fd` of the `dprintf`:
-	- Because `0x601010` = 6295568, my payload is `%6295568c%18$n`.
-	- After sending that, I made my script to sleep 5 seconds, in order to make sure the printing process in remote side is properly done.
-	- Finally, the $$37^{th}$$ parameter is changed into `0x601010`, and I used `%1c%37$hhn` to *overwrite* the file descriptor from `2` to `1`, which is `stdout`.
+- I found that the $$18^{th}$$ parameter points to the address of the $$37^{th}$$ parameter. From the `vmmap`, we know that the `stack` is writable. I will use these two address to alter the `fd` of the `dprintf`:
+  - Because `0x601010` = 6295568, my payload is `%6295568c%18$n`.
+  - After sending that, I made my script to sleep 5 seconds, in order to make sure the printing process in remote side is properly done.
+  - Finally, the $$37^{th}$$ parameter is changed into `0x601010`, and I used `%1c%37$hhn` to *overwrite* the file descriptor from `2` to `1`, which is `stdout`.
 
 - **Step 0x04**
 
@@ -148,12 +149,12 @@ Because x64 address is `8 bytes`, and we are restricted to write as large as `4 
 
 {% include figure.html path="https://i.imgur.com/ZG0BRCd.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-My strategies are:
-	1. Make $$7^{th}$$ point to $$12^{nd}$$ via `%232c%5$hhn` because `0xe8 = 232`.
-	2. Make $$12^{nd}$$ point to $$10^{th}$$ via `%216c%7$hhn` because `0xd8 = 216`.
-	3. Make $$10^{th}$$ point to address of `one_gadget` via 
-		- `%(gadget_addr % 0x10000)c%12$hn`, and
-		- `%((gadget_addr >> 0x10)% 0x10000)c%12$hn` after `%218c%7$hhn`.
+- My strategies are:
+  1. Make $$7^{th}$$ point to $$12^{nd}$$ via `%232c%5$hhn` because `0xe8 = 232`.
+  2. Make $$12^{nd}$$ point to $$10^{th}$$ via `%216c%7$hhn` because `0xd8 = 216`.
+  3. Make $$10^{th}$$ point to address of `one_gadget` via 
+    - `%(gadget_addr % 0x10000)c%12$hn`, and
+    - `%((gadget_addr >> 0x10)% 0x10000)c%12$hn` after `%218c%7$hhn`.
 
 - **Step 0x06**
 
@@ -205,11 +206,14 @@ Note that the number of letter `F` and `x` are same, so I did some research of f
 - **Step 0x05**
 
 {% include figure.html path="https://i.imgur.com/4hkEEHr.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-By doing some analysis and trail-and-error, I made this mapping table. Note that `,` and `.` stand for `input` and `output`, respectively. Therefore, it makes sense that `,` and `.` are mostly located in the beginning and ending section, respectively. Now we are able to find the flag inside it. For that, we need to know how this language works. Take the following section for example, `++++++++[>++++++++++<-]>+++++`.
-	- `[` `]` means a while loop, and it breaks when the current pointer equals to zero
-	- `>` means to increase the pointer
-	- `+` means to increase the byte in the current pointer
-	- Assume the initial value of current pointer is zero, and by the rules shown above, we are able to calculate the final value, that is, `10` * `8` + `5` = `85`, which represents `U` in ASCII code.
+
+By doing some analysis and trail-and-error, I made this mapping table. Note that `,` and `.` stand for `input` and `output`, respectively. Therefore, it makes sense that `,` and `.` are mostly located in the beginning and ending section, respectively. Now we are able to find the flag inside it. For that, we need to know how this language works.
+
+- Take the following section for example, `++++++++[>++++++++++<-]>+++++`.
+  - `[` `]` means a while loop, and it breaks when the current pointer equals to zero
+  - `>` means to increase the pointer
+  - `+` means to increase the byte in the current pointer
+  - Assume the initial value of current pointer is zero, and by the rules shown above, we are able to calculate the final value, that is, `10` * `8` + `5` = `85`, which represents `U` in ASCII code.
 
 - **Step 0x06**
 
