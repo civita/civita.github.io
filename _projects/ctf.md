@@ -144,7 +144,9 @@ Because of the constraints, I choose `0x10a38c` as my *gadget*. Therefore the ad
 - **Step 0x05**
 
 Because x64 address is `8 bytes`, and we are restricted to write as large as `4 bytes` at each input via `%n`, we have to split our inputs into small pieces via `%hn` and `%hhn`.
+
 {% include figure.html path="https://i.imgur.com/ZG0BRCd.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+
 My strategies are:
     1. Make $$7^{th}$$ point to $$12^{nd}$$ via `%232c%5$hhn` because `0xe8 = 232`.
     2. Make $$12^{nd}$$ point to $$10^{th}$$ via `%216c%7$hhn` because `0xd8 = 216`.
@@ -158,7 +160,7 @@ Therefore, after the echo ends, the process will not `ret` to `libc_start_main`.
 In my script, I *restored* $$7^{th}$$ parameter into the initial value to avoid *segmentation fault* when the stack *pops*.
 {% include figure.html path="https://i.imgur.com/pNvU9qu.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
---- 
+---
 
 ## simplebox
 
