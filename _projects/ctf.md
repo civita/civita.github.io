@@ -200,27 +200,32 @@ Moreover, with `phar://` protocol, the metadata inside will be unserialized. Wit
 
 After concatenating GIF magic number (`GIF89a`) with the phar file we created, we can upload the *fake GIF* to the server with Hackbar, and get the file path:
 
-1. Use the `base64` in command line to encode our GIF file
+Use the `base64` in command line to encode our GIF file
 
 {% include figure.html path="https://i.imgur.com/WB6PN5Z.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-2. Use Firefox with Hackbar to send the upload request. Note that we should set `action[0]` instead of `action`.
+Use Firefox with Hackbar to send the upload request. Note that we should set `action[0]` instead of `action`.
 
 {% include figure.html path="https://i.imgur.com/V7BP8tV.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-3. Copy the uploaded GIF url.
+Copy the uploaded GIF url.
 
-4. Now, when we call `getsize`, `__destruct()` would be called after the `getsize` ended, and our evil php file named `r07922014.php` will be upload. Note that the protocol should be `phar`, in order to unserialize the metadata, which contains our `FileManager` class.
+Now, when we call `getsize`, `__destruct()` would be called after the `getsize` ended, and our evil php file named `r07922014.php` will be upload. Note that the protocol should be `phar`, in order to unserialize the metadata, which contains our `FileManager` class.
 
 {% include figure.html path="https://i.imgur.com/5Obk0xe.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
 - **Step 0x04**
 
-1. Now, we are able to do RCE by calling our evil `php` and set `1` to the system command we want to call:
+Now, we are able to do RCE by calling our evil `php` and set `1` to the system command we want to call:
+
 {% include figure.html path="https://i.imgur.com/QHZjQDI.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-2. I found a file named `fl49` in the root directory:
+
+I found a file named `fl49` in the root directory:
+
 {% include figure.html path="https://i.imgur.com/mTL1ZS4.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-3. *Whoa!* Here is the flag.
+
+*Whoa!* Here is the flag.
+
 {% include figure.html path="https://i.imgur.com/M3kdTLm.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
 
