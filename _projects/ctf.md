@@ -183,45 +183,45 @@ Moreover, with `phar://` protocol, the metadata inside will be unserialized. Wit
 {% include figure.html path="https://i.imgur.com/gBqRy28.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
 - **Step 0x02**
+	- The function `__destruct()` in class `FileManager` is    vulnerable becuase when it is called and the `mode` is `upload`, we can upload everything with arbitrary extension other than `.gif`. To do the RCE, this is essential. For example, we can upload a `php` file with `system` function inside via this vulnerability.
+	- However, if we use the `_GET` action to `upload`, the file name is always ended with `.gif`. How can we change the mode into `upload` in the class besides using `_GET`?
+	- The thing is, we are able to create a `phar`, and pack a php class named `FileManager`, with the following setups:
+		-  `mode` is set to `upload`
+		-  `name` is the path to upload our php file, and
+		- `content` is `<?php system(\$_GET[1]); ?>`.
+	- In my script, the `nmae` to the evil php is `/var/www/html/uploads/r07922014.php`.
+	- The script for creating phar is located at `code/newPhar.php`
+	- Before running the `php` script, we should set `phar.readonly` to `Off` in `php.ini`.
 
 {% include figure.html path="https://i.imgur.com/mgupIrw.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-    - The function `__destruct()` in class `FileManager` is    vulnerable becuase when it is called and the `mode` is `upload`, we can upload everything with arbitrary extension other than `.gif`. To do the RCE, this is essential. For example, we can upload a `php` file with `system` function inside via this vulnerability.
-    - However, if we use the `_GET` action to `upload`, the file name is always ended with `.gif`. How can we change the mode into `upload` in the class besides using `_GET`?
-    - The thing is, we are able to create a `phar`, and pack a php class named `FileManager`, with the following setups:
-        -  `mode` is set to `upload`
-        -  `name` is the path to upload our php file, and
-        - `content` is `<?php system(\$_GET[1]); ?>`.
-    - In my script, the `nmae` to the evil php is `/var/www/html/uploads/r07922014.php`.
-    - The script for creating phar is located at `code/newPhar.php`
-        - Before running the `php` script, we should set `phar.readonly` to `Off` in `php.ini`.
-          
+	  
 - **Step 0x03**
 
 After concatenating GIF magic number (`GIF89a`) with the phar file we created, we can upload the *fake GIF* to the server with Hackbar, and get the file path:
 
-    1. Use the `base64` in command line to encode our GIF file
-    
-        {% include figure.html path="https://i.imgur.com/WB6PN5Z.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+1. Use the `base64` in command line to encode our GIF file
 
-    2. Use Firefox with Hackbar to send the upload request. Note that we should set `action[0]` instead of `action`.
+{% include figure.html path="https://i.imgur.com/WB6PN5Z.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-        {% include figure.html path="https://i.imgur.com/V7BP8tV.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+2. Use Firefox with Hackbar to send the upload request. Note that we should set `action[0]` instead of `action`.
 
-    3. Copy the uploaded GIF url.
-    
-    4. Now, when we call `getsize`, `__destruct()` would be called after the `getsize` ended, and our evil php file named `r07922014.php` will be upload. Note that the protocol should be `phar`, in order to unserialize the metadata, which contains our `FileManager` class.
+{% include figure.html path="https://i.imgur.com/V7BP8tV.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-        {% include figure.html path="https://i.imgur.com/5Obk0xe.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+3. Copy the uploaded GIF url.
+
+4. Now, when we call `getsize`, `__destruct()` would be called after the `getsize` ended, and our evil php file named `r07922014.php` will be upload. Note that the protocol should be `phar`, in order to unserialize the metadata, which contains our `FileManager` class.
+
+{% include figure.html path="https://i.imgur.com/5Obk0xe.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
 - **Step 0x04**
 
-    1. Now, we are able to do RCE by calling our evil `php` and set `1` to the system command we want to call:
-       {% include figure.html path="https://i.imgur.com/QHZjQDI.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-    3. I found a file named `fl49` in the root directory:
-	{% include figure.html path="https://i.imgur.com/mTL1ZS4.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-    4. *Whoa!* Here is the flag.
-	{% include figure.html path="https://i.imgur.com/M3kdTLm.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+1. Now, we are able to do RCE by calling our evil `php` and set `1` to the system command we want to call:
+{% include figure.html path="https://i.imgur.com/QHZjQDI.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+2. I found a file named `fl49` in the root directory:
+{% include figure.html path="https://i.imgur.com/mTL1ZS4.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+3. *Whoa!* Here is the flag.
+{% include figure.html path="https://i.imgur.com/M3kdTLm.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
 
 ## HITCON CTF 2018
