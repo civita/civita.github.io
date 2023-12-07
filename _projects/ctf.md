@@ -11,6 +11,7 @@ img: https://i.imgur.com/ZG0BRCd.png
 ## Goto
 
 ### Tools
+
 - GDB (with [```peda```](https://github.com/longld/peda))
 - Python 2.7 (with [```pwntools```](https://github.com/Gallopsled/pwntools))
 - [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
@@ -89,6 +90,7 @@ My payload is `"A" * 136 + p64(0xc420047da0) + p64(0x1b) + "B" * 176 + p64(0x42e
 ## echo
 
 ### Tools
+
 - GDB (with [```peda```](https://github.com/longld/peda))
 - Python 2.7 (with [```pwntools```](https://github.com/Gallopsled/pwntools))
 - [one_gadget](https://github.com/david942j/one_gadget)
@@ -156,6 +158,7 @@ In my script, I *restored* $7^{th}$ parameter into the initial value to avoid *s
 ## simplebox
 
 ### Tools
+
 - [UBX](https://upx.github.io)
 - GDB (with [```peda```](https://github.com/longld/peda))
 - Python 2.7
@@ -189,12 +192,12 @@ Interestingly, the string consists of only eight types of characters, which is `
 
 - **Step 0x04**
 
-Note that the number of letter `F` and `x` are same, so I did some research of finding a programming language that is consists of eight commands (letters) and two of them have to be same amount. Surprisingly, I found a language called [`Brainf***`](https://en.wikipedia.org/wiki/Brainfuck), which satisfies all the conditions above. However, Brainf*** uses different ASCII characters from ours. Therefore, we have to *translate* ours to the correct format.
+Note that the number of letter `F` and `x` are same, so I did some research of finding a programming language that is consists of eight commands (letters) and two of them have to be same amount. Surprisingly, I found a language called [`Brainf***`](https://en.wikipedia.org/wiki/Brainfuck), which satisfies all the conditions above. However, this language uses different ASCII characters from ours. Therefore, we have to *translate* ours to the correct format.
 
 - **Step 0x05**
 
 {% include figure.html path="https://i.imgur.com/4hkEEHr.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-By doing some analysis and trail-and-error, I made this mapping table. Note that `,` and `.` stand for `input` and `output`, respectively. Therefore, it makes sense that `,` and `.` are mostly located in the beginning and ending section, respectively. The full Brainf*** code is in `brainf***_input`. Now we are able to find the flag inside it. For that, we need to know how Brainf*** works. Take the following section for example, `++++++++[>++++++++++<-]>+++++`.
+By doing some analysis and trail-and-error, I made this mapping table. Note that `,` and `.` stand for `input` and `output`, respectively. Therefore, it makes sense that `,` and `.` are mostly located in the beginning and ending section, respectively. Now we are able to find the flag inside it. For that, we need to know how this language works. Take the following section for example, `++++++++[>++++++++++<-]>+++++`.
     - `[` `]` means a while loop, and it breaks when the current pointer equals to zero
     - `>` means to increase the pointer
     - `+` means to increase the byte in the current pointer
@@ -209,6 +212,7 @@ By doing some analysis and trail-and-error, I made this mapping table. Note that
 ## GhostGIF
 
 ### Tools
+
 - Firefox with `hackbar`
 - `php`
 - base64
@@ -239,7 +243,6 @@ Moreover, with `phar://` protocol, the metadata inside will be unserialized. Wit
 	- Before running the `php` script, we should set `phar.readonly` to `Off` in `php.ini`.
 
 {% include figure.html path="https://i.imgur.com/mgupIrw.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-
 	  
 - **Step 0x03**
 
@@ -278,6 +281,7 @@ I found a file named `fl49` in the root directory:
 ## HITCON CTF 2018
 
 ### EV3 Basic
+
 This challenge came with one `.jpg` and `.pklg` files.
 - First, I used steganography detection packages (`zsteg` for example) to inspect the `.jpg` file. Unfortunately, there was nothing with steganography in this challenge. However, there is some characters on the LEGO EV3 screen: `hitcon{ ...1... d...  a...  e... }`. This probably has something to do with the flag.
 - The `.pklg` file is the record file from the `WireShark`. 
