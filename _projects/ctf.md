@@ -228,25 +228,25 @@ After concatenating GIF magic number (`GIF89a`) with the phar file we created, w
 
 ### EV3 Basic
 This challenge came with one `.jpg` and `.pklg` files.
-#### 1. First, I used steganography detection packages (`zsteg` for example) to inspect the `.jpg` file. Unfortunately, there was nothing with steganography in this challenge. However, there is some characters on the LEGO EV3 screen: `hitcon{ ...1... d...  a...  e... }`. This probably has something to do with the flag.
-#### 2. The `.pklg` file is the record file from the `WireShark`. 
+- First, I used steganography detection packages (`zsteg` for example) to inspect the `.jpg` file. Unfortunately, there was nothing with steganography in this challenge. However, there is some characters on the LEGO EV3 screen: `hitcon{ ...1... d...  a...  e... }`. This probably has something to do with the flag.
+- The `.pklg` file is the record file from the `WireShark`. 
 {% include figure.html path="https://i.imgur.com/7t9oBBb.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 After reading the contents briefly, this is the log of the connection between the computer (Macbook Pro here) and the LEGO V3 via bluetooth.
-#### 3. Moreover, I sorted the logs based on the protocol, and from No. 196, there are `RFCOMM` (Radio frequency communication) packages. According to the information from Internet, I thought there might be the contents shown on LEGO V3 screen in `RFCOMM` packages.
-#### 4. After scrolling through every package, I found something interesting. There is a character `h` in package No. 289.
+- Moreover, I sorted the logs based on the protocol, and from No. 196, there are `RFCOMM` (Radio frequency communication) packages. According to the information from Internet, I thought there might be the contents shown on LEGO V3 screen in `RFCOMM` packages.
+- After scrolling through every package, I found something interesting. There is a character `h` in package No. 289.
 {% include figure.html path="https://i.imgur.com/zT6X1zZ.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 In package No. 299, there is another character, `i`, in it.
 {% include figure.html path="https://i.imgur.com/ZREb5Q2.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 The difference between these two packages are at the addresses `0x16` and `0x1A`. The latter one is the ASCII of `h` and `i`. The former one might be the **offset** of the address where the character shown on the screen. The package No. 289 has `0x0A` at address `0x16`, and the package No. 299 has `0x14` at the same address. Since `0x14 - 0x0A = 0x0A`, I guess there is another packag with `0x14 + 0x0A = 0x1E` at the same address.
-#### 5. To verify whether my guess is correct or not, I tried to find another package whose `0x16` (that is, `frame[22]`) is `0x1E`:
+- To verify whether my guess is correct or not, I tried to find another package whose `0x16` (that is, `frame[22]`) is `0x1E`:
 {% include figure.html path="https://i.imgur.com/z9z14wZ.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 *Whoa!* I found it! In addition, the character (at `0x1A`) is `t`, which it exactly what I expected to find, because the flag starts with `hitcon{...}` according to the `.jpg` file.
-#### 6. Strangely, there are total *four* packages whose `0x16` is `0x1E`; if I set the filter to `frame[22]`28` there is nothing shown. Instead, after `0x1E` offset, we have to set `frame[23]` due to some carry bits or something else:
+- Strangely, there are total *four* packages whose `0x16` is `0x1E`; if I set the filter to `frame[22]`28` there is nothing shown. Instead, after `0x1E` offset, we have to set `frame[23]` due to some carry bits or something else:
 {% include figure.html path="https://i.imgur.com/IDU1g62.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 There are also four packages. The value at `0x19` alters, and this might be another offset.
-#### 7. Based on the `.jpg` file, I concluded that there are a *horizontal* offset and a *vertical* offset, and by setting `frame[22]` (or `frame[23]`) to a specific value (ex: `0x28` shown in above image), we have four packages in the same *row*, whose vertical offset in at `0x19` (`frame[25]`).
+- Based on the `.jpg` file, I concluded that there are a *horizontal* offset and a *vertical* offset, and by setting `frame[22]` (or `frame[23]`) to a specific value (ex: `0x28` shown in above image), we have four packages in the same *row*, whose vertical offset in at `0x19` (`frame[25]`).
 {% include figure.html path="https://i.imgur.com/C3OrqZ0.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-#### 8. After that, we are able to draw a table to illustrate my conclusion and based on the packages we've found:
+- After that, we are able to draw a table to illustrate my conclusion and based on the packages we've found:
 
 {% include figure.html path="https://i.imgur.com/4ZuC9D9.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
