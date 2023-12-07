@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Capture The Flag Challenges
-description: Write-ups of my approaches to solving selected CTF challenges, including HITCON CTF 2018.
+description: Write-ups of my approaches to solving various CTF challenges, including HITCON CTF 2018.
 importance: 4
 category: school
 img: https://i.imgur.com/ZG0BRCd.png
@@ -17,12 +17,12 @@ img: https://i.imgur.com/ZG0BRCd.png
 
 ### Steps
 
-- Step 0x00
+- **Step 0x00**
   
 First, this is a Go binary file, and the main function is in `main.main`. Because the program has two input functions, I tried to do the buffer overflow first. However, it showed the error:
 {% include figure.html path="https://i.imgur.com/C0AtDcf.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-- Step 0x01
+- **Step 0x01**
 
 Now we have some clues. First, from the first line of the error message, `hex(4707177784827586320)=0x415341416f422710`, we concluded that here must be a reasonable value of buffer size.
 {% include figure.html path="https://i.imgur.com/zrHsOEj.png" max-width="700" class="img-fluid rounded z-depth-1" %}
@@ -31,13 +31,13 @@ However, there is another one. By inspecting the manual page of Go language, the
 {% include figure.html path="https://i.imgur.com/QOigDYh.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 So my payload is `'A' * 136 + (pointer_to_buf) + (buf_size)`
 
-- Step 0x02
+- **Step 0x02**
 
 After step 0x01, we are able to re-write the return address without error.
 {% include figure.html path="https://i.imgur.com/qsy78Wv.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 With `pattc` again, I calculated the padding size is `176` here.
 
-- Step 0x03
+- **Step 0x03**
 
 Here I wanted to use ROP chain to get the shell. The conditions are `rax = 0x3b`, `rdi = address to ""/bin/sh"`, `rsi = 0`, `rdx = 0`, and invoke `syscall`.
 {% include figure.html path="https://i.imgur.com/AgBgEDz.png" max-width="700" class="img-fluid rounded z-depth-1" %}
@@ -65,20 +65,20 @@ And the ROP chain is now:
 | `0xc420047f98`     | '/bin/sh'   |
 Note that in the script, I use `p64()` to handle the addresses.
 
-- Step 0x04
+- **Step 0x04**
 
 Now, I am able to get the shell in the local side:
 {% include figure.html path="https://i.imgur.com/jQl7aeg.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 However, when I was trying to exploit buffer overflow in the remote, it was unsuccessful.
 By doing some research, I realized that the base of stack address is not a fixed value. It varies from OS to OS. Because my ROP chain contains a pointer to a stack address, which stores the text `/bin/sh`, I have to find the according stack address in the remote side.
 
-- Step 0x05
+- **Step 0x05**
 
 With a *quick and dirty* solution, I found the correct stack address by using `for` loop and trial and error.
 {% include figure.html path="https://i.imgur.com/LaRqPxR.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 Note that I only tried 256 different combinations, from `0xc420000f98` to `0xc4200fff98`.
 
-- Step 0x06
+- **Step 0x06**
 
 Finally, the buffer overflow and ROP chain worked, and I got the flag.
 {% include figure.html path="https://i.imgur.com/lePubEJ.png" max-width="700" class="img-fluid rounded z-depth-1" %}
@@ -162,36 +162,36 @@ In my script, I *restored* $7^{th}$ parameter into the initial value to avoid *s
 
 ### Steps
 
-- Step 0x00
+- **Step 0x00**
 
 First, by inspecting the disasmembled code, we know that the binary file is packed with `UPX`.
 {% include figure.html path="https://i.imgur.com/0qJpZZ2.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 Fortunately, we can decompress it without a hassle by using `UPX -d` option.
 {% include figure.html path="https://i.imgur.com/bS8UZ9A.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-- Step 0x01
+- **Step 0x01**
 
 I used `GDB` to run the binary step by step. When the process is at `0x401978`, there are interesting strings in `RDI` as the following screenshot shows.
 {% include figure.html path="https://i.imgur.com/qRsrbBR.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 This string ends at `0x4c6ae0`:
 {% include figure.html path="https://i.imgur.com/zYEzV30.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-- Step 0x02
+- **Step 0x02**
 
 By experience and intuition, I guessed this string is something to do with the flag since I cannot find the output `Try hard!` in the binary file. Therefore, I *dumped* this string to a file for convenience.
 {% include figure.html path="https://i.imgur.com/rdMMcsh.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-- Step 0x03
+- **Step 0x03**
 
 {% include figure.html path="https://i.imgur.com/mT8zBme.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 Interestingly, the string consists of only eight types of characters, which is `m`, `B`, `O`, `F`, `a`, `b`, `x`, and `o`. Moreover, I counted the number of each letter, and the result are shown below:
 {% include figure.html path="https://i.imgur.com/5bE2as7.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
-- Step 0x04
+- **Step 0x04**
 
 Note that the number of letter `F` and `x` are same, so I did some research of finding a programming language that is consists of eight commands (letters) and two of them have to be same amount. Surprisingly, I found a language called [`Brainf***`](https://en.wikipedia.org/wiki/Brainfuck), which satisfies all the conditions above. However, Brainf*** uses different ASCII characters from ours. Therefore, we have to *translate* ours to the correct format.
 
-- Step 0x05
+- **Step 0x05**
 
 {% include figure.html path="https://i.imgur.com/4hkEEHr.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 By doing some analysis and trail-and-error, I made this mapping table. Note that `,` and `.` stand for `input` and `output`, respectively. Therefore, it makes sense that `,` and `.` are mostly located in the beginning and ending section, respectively. The full Brainf*** code is in `brainf***_input`. Now we are able to find the flag inside it. For that, we need to know how Brainf*** works. Take the following section for example, `++++++++[>++++++++++<-]>+++++`.
@@ -200,7 +200,7 @@ By doing some analysis and trail-and-error, I made this mapping table. Note that
     - `+` means to increase the byte in the current pointer
     - Assume the initial value of current pointer is zero, and by the rules shown above, we are able to calculate the final value, that is, `10` * `8` + `5` = `85`, which represents `U` in ASCII code.
 
-- Step 0x06
+- **Step 0x06**
 
 {% include figure.html path="https://i.imgur.com/JMV5bLv.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
