@@ -131,10 +131,14 @@ I found that the $$18^{th}$$ parameter points to the address of the $$37^{th}$$ 
 - **Step 0x04**
 
 Now we can focus on getting the shell. Here we have some clues:
-    1. From `vmmap` and the address of `libc_start_main`  $$10^{th}$$ parameter) , we can calculate the `offset` to the `libc_base`. Take the screenshots above for example, the offset is `0x7ffff7a05b97` - `0x7ffff79e4000` = **`0x21b97`**, which is a fixed value regardless of the randomization of the base.
-    2. With `one_gadget`, we have three candidates as the following snapshot shows.
+
+From `vmmap` and the address of `libc_start_main`  $$10^{th}$$ parameter) , we can calculate the `offset` to the `libc_base`. Take the screenshots above for example, the offset is `0x7ffff7a05b97` - `0x7ffff79e4000` = **`0x21b97`**, which is a fixed value regardless of the randomization of the base.
+
+With `one_gadget`, we have three candidates as the following snapshot shows.
+
 {% include figure.html path="https://i.imgur.com/cegDTi7.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-    3. Because of the constraints, I choose `0x10a38c` as my *gadget*. Therefore the address of the gadget is `address of (libc_start_main+231)` - `0x21b97` + `0x10a38c`
+
+Because of the constraints, I choose `0x10a38c` as my *gadget*. Therefore the address of the gadget is `address of (libc_start_main+231)` - `0x21b97` + `0x10a38c`
 
 - **Step 0x05**
 
