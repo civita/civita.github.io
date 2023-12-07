@@ -7,11 +7,14 @@ category: school
 img: https://i.imgur.com/ZG0BRCd.png
 ---
 
+
 ## Goto
+
 ### Tools
 - GDB (with [```peda```](https://github.com/longld/peda))
 - Python 2.7 (with [```pwntools```](https://github.com/Gallopsled/pwntools))
 - [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
+
 ### Steps
 - Step 0x00
 First, this is a Go binary file, and the main function is in `main.main`. Because the program has two input functions, I tried to do the buffer overflow first. However, it showed the error:
@@ -67,12 +70,15 @@ Finally, the buffer overflow and ROP chain worked, and I got the flag.
 {% include figure.html path="https://i.imgur.com/lePubEJ.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 My payload is `"A" * 136 + p64(0xc420047da0) + p64(0x1b) + "B" * 176 + p64(0x42ed2d) + p64(0xc42003ff98) + p64(0x44f609) + p64(0x732f2f2f6e69622f) + p64(0x68)`.
 
+
 ## echo
+
 ### Tools
 - GDB (with [```peda```](https://github.com/longld/peda))
 - Python 2.7 (with [```pwntools```](https://github.com/Gallopsled/pwntools))
 - [one_gadget](https://github.com/david942j/one_gadget)
 - IDA Pro
+
 ### Steps
 - **Step 0x00**
 We have a binary and a `libc` file. First, run the binary, and it `echoes` our inputs until we type `exit`. However, when I run the process remotely via `telnet`, I cannot get any output unless typing `exit`. I inspect the binary file with *IDA Pro*, and found that the texts echoed from the program are directed to `stderr` (`fd = 2`)
@@ -116,11 +122,14 @@ Therefore, after the echo ends, the process will not `ret` to `libc_start_main`.
 In my script, I *restored* $7^{th}$ parameter into the initial value to avoid *segmentation fault* when the stack *pops*.
 {% include figure.html path="https://i.imgur.com/pNvU9qu.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
+
 ## simplebox
+
 ### Tools
 - [UBX](https://upx.github.io)
 - GDB (with [```peda```](https://github.com/longld/peda))
 - Python 2.7
+
 ### Steps
 - Step 0x00
 First, by inspecting the disasmembled code, we know that the binary file is packed with `UPX`.
@@ -151,11 +160,14 @@ By doing some analysis and trail-and-error, I made this mapping table. Note that
 - Step 0x07
 {% include figure.html path="https://i.imgur.com/JMV5bLv.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
+
 ## GhostGIF
+
 ### Tools
 - Firefox with `hackbar`
 - `php`
 - base64
+
 ### Steps
 - **Step 0x00**
 First, the source code is provided. There are `_GET` actions such as `upload`, `getsize`, `modify`, and `delete` which can be used.
@@ -211,7 +223,9 @@ After concatenating GIF magic number (`GIF89a`) with the phar file we created, w
     3. *Whoa!* Here is the flag.
 {% include figure.html path="https://i.imgur.com/M3kdTLm.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
+
 ## HITCON CTF 2018
+
 ### EV3 Basic
 This challenge came with one `.jpg` and `.pklg` files.
 1. First, I used steganography detection packages (`zsteg` for example) to inspect the `.jpg` file. Unfortunately, there was nothing with steganography in this challenge. However, there is some characters on the LEGO EV3 screen: `hitcon{ ...1... d...  a...  e... }`. This probably has something to do with the flag.
