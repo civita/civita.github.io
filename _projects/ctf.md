@@ -16,21 +16,29 @@ img: https://i.imgur.com/ZG0BRCd.png
 - [ROPgadget](https://github.com/JonathanSalwan/ROPgadget)
 
 ### Steps
+
 - Step 0x00
+  
 First, this is a Go binary file, and the main function is in `main.main`. Because the program has two input functions, I tried to do the buffer overflow first. However, it showed the error:
 {% include figure.html path="https://i.imgur.com/C0AtDcf.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+
 - Step 0x01
+
 Now we have some clues. First, from the first line of the error message, `hex(4707177784827586320)=0x415341416f422710`, we concluded that here must be a reasonable value of buffer size.
 {% include figure.html path="https://i.imgur.com/zrHsOEj.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 With the help of `pattc`, the calculated padding size is `149`.
 However, there is another one. By inspecting the manual page of Go language, the function `slicebytetostring` has argument which is the pointer to the buffer as I highlighted in the screenshot above. `0x41416d4141514141` represented as `AAQAAmAA` with little-endian.
 {% include figure.html path="https://i.imgur.com/QOigDYh.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 So my payload is `'A' * 136 + (pointer_to_buf) + (buf_size)`
+
 - Step 0x02
+
 After step 0x01, we are able to re-write the return address without error.
 {% include figure.html path="https://i.imgur.com/qsy78Wv.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 With `pattc` again, I calculated the padding size is `176` here.
+
 - Step 0x03
+
 Here I wanted to use ROP chain to get the shell. The conditions are `rax = 0x3b`, `rdi = address to ""/bin/sh"`, `rsi = 0`, `rdx = 0`, and invoke `syscall`.
 {% include figure.html path="https://i.imgur.com/AgBgEDz.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 Since the `rsi` and `rdx` is already zero, and `rax` is `(buf_size) + 0x20`, where `(buf_size)` is explained in step 0x01. So my `buf_size = 0x3b - 0x20 = 0x1b`
@@ -56,20 +64,27 @@ And the ROP chain is now:
 | `0xc420047f90`     | `0x44f609`   |
 | `0xc420047f98`     | '/bin/sh'   |
 Note that in the script, I use `p64()` to handle the addresses.
+
 - Step 0x04
+
 Now, I am able to get the shell in the local side:
 {% include figure.html path="https://i.imgur.com/jQl7aeg.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 However, when I was trying to exploit buffer overflow in the remote, it was unsuccessful.
 By doing some research, I realized that the base of stack address is not a fixed value. It varies from OS to OS. Because my ROP chain contains a pointer to a stack address, which stores the text `/bin/sh`, I have to find the according stack address in the remote side.
+
 - Step 0x05
+
 With a *quick and dirty* solution, I found the correct stack address by using `for` loop and trial and error.
 {% include figure.html path="https://i.imgur.com/LaRqPxR.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 Note that I only tried 256 different combinations, from `0xc420000f98` to `0xc4200fff98`.
+
 - Step 0x06
+
 Finally, the buffer overflow and ROP chain worked, and I got the flag.
 {% include figure.html path="https://i.imgur.com/lePubEJ.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 My payload is `"A" * 136 + p64(0xc420047da0) + p64(0x1b) + "B" * 176 + p64(0x42ed2d) + p64(0xc42003ff98) + p64(0x44f609) + p64(0x732f2f2f6e69622f) + p64(0x68)`.
 
+---
 
 ## echo
 
@@ -80,35 +95,47 @@ My payload is `"A" * 136 + p64(0xc420047da0) + p64(0x1b) + "B" * 176 + p64(0x42e
 - IDA Pro
 
 ### Steps
+
 - **Step 0x00**
+
 We have a binary and a `libc` file. First, run the binary, and it `echoes` our inputs until we type `exit`. However, when I run the process remotely via `telnet`, I cannot get any output unless typing `exit`. I inspect the binary file with *IDA Pro*, and found that the texts echoed from the program are directed to `stderr` (`fd = 2`)
 {% include figure.html path="https://i.imgur.com/3HPwG2W.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+
 - **Step 0x01**
+
 If we want to use `fmt` to exploit remotely, we have to alter this value from `2` to `1`. I found the address of this variable is `0x601010`:
 {% include figure.html path="https://i.imgur.com/QzJC5K1.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 However, we are not sure that this section is writable or not. So I use `gdb` and `vmmap` to see the permission of each section.
 {% include figure.html path="https://i.imgur.com/ticStTi.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 Fortunately, `0x601010` is located in writable section as the screenshot shows.
+
 - **Step 0x02**
+
 To know the parameters that we can use with `printf` and `%n`, I set the breakpoint on `0x40077b`, where `dprintf` is called.
 {% include figure.html path="https://i.imgur.com/1JhDioF.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 I used `gdb` again, and the following picture indicates the parameters on the stack. The parameters from $5^{th}$ start at `$rsp`.
 {% include figure.html path="https://i.imgur.com/iLQBp4g.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 For example, the $10^{th}$ parameter is `0x7ffff7a05b97`. Note that this is *the pointer* pointed to `libc_start_main`, which we will use to *leak* `libc_base` later.
 {% include figure.html path="https://i.imgur.com/ROgwHwT.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+
 - **Step 0x03**
+
 {% include figure.html path="https://i.imgur.com/HNALuBR.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 I found that the $18^{th}$ parameter points to the address of the $37^{th}$ parameter. From the `vmmap`, we know that the `stack` is writable. I will use these two address to alter the `fd` of the `dprintf`:
     - Because `0x601010` = 6295568, my payload is `%6295568c%18$n`.
     - After sending that, I made my script to sleep 5 seconds, in order to make sure the printing process in remote side is properly done.
     - Finally, the $37^{th}$ parameter is changed into `0x601010`, and I used `%1c%37$hhn` to *overwrite* the file descriptor from `2` to `1`, which is `stdout`.
+
 - **Step 0x04**
+
 Now we can focus on getting the shell. Here we have some clues:
     1. From `vmmap` and the address of `libc_start_main` ($10^{th}$ parameter) , we can calculate the `offset` to the `libc_base`. Take the screenshots above for example, the offset is `0x7ffff7a05b97` - `0x7ffff79e4000` = **`0x21b97`**, which is a fixed value regardless of the randomization of the base.
     2. With `one_gadget`, we have three candidates as the following snapshot shows.
 {% include figure.html path="https://i.imgur.com/cegDTi7.png" max-width="700" class="img-fluid rounded z-depth-1" %}
     3. Because of the constraints, I choose `0x10a38c` as my *gadget*. Therefore the address of the gadget is `address of (libc_start_main+231)` - `0x21b97` + `0x10a38c`
+
 - **Step 0x05**
+
 Because x64 address is `8 bytes`, and we are restricted to write as large as `4 bytes` at each input via `%n`, we have to split our inputs into small pieces via `%hn` and `%hhn`.
 {% include figure.html path="https://i.imgur.com/ZG0BRCd.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 My strategies are:
@@ -117,11 +144,14 @@ My strategies are:
     3. Make $10^{th}$ point to address of `one_gadget` via 
         - `%(gadget_addr % 0x10000)c%12$hn`, and
         - `%((gadget_addr >> 0x10)% 0x10000)c%12$hn` after `%218c%7$hhn`.
+
 - **Step 0x06**
+
 Therefore, after the echo ends, the process will not `ret` to `libc_start_main`. Instead, it will go to our `one_gadget`, and we are able to *get the shell* and the flag as well.
 In my script, I *restored* $7^{th}$ parameter into the initial value to avoid *segmentation fault* when the stack *pops*.
 {% include figure.html path="https://i.imgur.com/pNvU9qu.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
+--- 
 
 ## simplebox
 
@@ -131,35 +161,50 @@ In my script, I *restored* $7^{th}$ parameter into the initial value to avoid *s
 - Python 2.7
 
 ### Steps
+
 - Step 0x00
+
 First, by inspecting the disasmembled code, we know that the binary file is packed with `UPX`.
 {% include figure.html path="https://i.imgur.com/0qJpZZ2.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 Fortunately, we can decompress it without a hassle by using `UPX -d` option.
 {% include figure.html path="https://i.imgur.com/bS8UZ9A.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+
 - Step 0x01
+
 I used `GDB` to run the binary step by step. When the process is at `0x401978`, there are interesting strings in `RDI` as the following screenshot shows.
 {% include figure.html path="https://i.imgur.com/qRsrbBR.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 This string ends at `0x4c6ae0`:
 {% include figure.html path="https://i.imgur.com/zYEzV30.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-- Step 0x03
+
+- Step 0x02
+
 By experience and intuition, I guessed this string is something to do with the flag since I cannot find the output `Try hard!` in the binary file. Therefore, I *dumped* this string to a file for convenience.
 {% include figure.html path="https://i.imgur.com/rdMMcsh.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-- Step 0x04
+
+- Step 0x03
+
 {% include figure.html path="https://i.imgur.com/mT8zBme.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 Interestingly, the string consists of only eight types of characters, which is `m`, `B`, `O`, `F`, `a`, `b`, `x`, and `o`. Moreover, I counted the number of each letter, and the result are shown below:
 {% include figure.html path="https://i.imgur.com/5bE2as7.png" max-width="700" class="img-fluid rounded z-depth-1" %}
-- Step 0x05
+
+- Step 0x04
+
 Note that the number of letter `F` and `x` are same, so I did some research of finding a programming language that is consists of eight commands (letters) and two of them have to be same amount. Surprisingly, I found a language called [`Brainf***`](https://en.wikipedia.org/wiki/Brainfuck), which satisfies all the conditions above. However, Brainf*** uses different ASCII characters from ours. Therefore, we have to *translate* ours to the correct format.
-- Step 0x06
+
+- Step 0x05
+
 {% include figure.html path="https://i.imgur.com/4hkEEHr.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 By doing some analysis and trail-and-error, I made this mapping table. Note that `,` and `.` stand for `input` and `output`, respectively. Therefore, it makes sense that `,` and `.` are mostly located in the beginning and ending section, respectively. The full Brainf*** code is in `brainf***_input`. Now we are able to find the flag inside it. For that, we need to know how Brainf*** works. Take the following section for example, `++++++++[>++++++++++<-]>+++++`.
     - `[` `]` means a while loop, and it breaks when the current pointer equals to zero
     - `>` means to increase the pointer
     - `+` means to increase the byte in the current pointer
     - Assume the initial value of current pointer is zero, and by the rules shown above, we are able to calculate the final value, that is, `10` * `8` + `5` = `85`, which represents `U` in ASCII code.
-- Step 0x07
+
+- Step 0x06
+
 {% include figure.html path="https://i.imgur.com/JMV5bLv.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
+---
 
 ## GhostGIF
 
@@ -228,6 +273,7 @@ I found a file named `fl49` in the root directory:
 
 {% include figure.html path="https://i.imgur.com/M3kdTLm.png" max-width="700" class="img-fluid rounded z-depth-1" %}
 
+---
 
 ## HITCON CTF 2018
 
