@@ -123,6 +123,7 @@ For example, the $$10^{th}$$ parameter is `0x7ffff7a05b97`. Note that this is *t
 - **Step 0x03**
 
 {% include figure.html path="https://i.imgur.com/HNALuBR.png" max-width="700" class="img-fluid rounded z-depth-1" %}
+
 I found that the $$18^{th}$$ parameter points to the address of the $$37^{th}$$ parameter. From the `vmmap`, we know that the `stack` is writable. I will use these two address to alter the `fd` of the `dprintf`:
     - Because `0x601010` = 6295568, my payload is `%6295568c%18$n`.
     - After sending that, I made my script to sleep 5 seconds, in order to make sure the printing process in remote side is properly done.
