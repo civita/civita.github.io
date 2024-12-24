@@ -45,15 +45,15 @@ The Rayleigh-Plesset equation describes the variation in bubble radius in a liqu
 $$\dot{R}R+\frac{3}{2}\dot{R}^2=\frac{1}{\rho}(p_{gas}(t)-P_0-P(t)-4\eta\frac{\dot{R}}{R}-2\frac{\gamma}{R})$$
 
 where
-- $R$: Bubble radius  
-- $\dot{R}$: Rate of change of radius with time  
-- $\rho$: Liquid density  
-- $\gamma$: Surface tension  
-- $P(t)$: Pressure from periodic ultrasonic waves, typically sinusoidal  
-- $p_{gas}(t)$: Gas pressure inside the bubble  
-- $P_0$: Atmospheric pressure (1 atm at sea level)  
+- $$R$$: Bubble radius  
+- $$\dot{R}$$: Rate of change of radius with time  
+- $$\rho$$: Liquid density  
+- $$\gamma$$: Surface tension  
+- $$P(t)$$: Pressure from periodic ultrasonic waves, typically sinusoidal  
+- $$p_{gas}(t)$$: Gas pressure inside the bubble  
+- $$P_0$$: Atmospheric pressure (1 atm at sea level)  
 
-For detailed derivations, refer to <d-cite key="brenner:2002"/>. In this experiment, we adjusted the frequency and amplitude of ultrasonic waves ($P(t)$) while keeping other parameters constant (e.g., using water as the liquid) until light emission was observed.
+For detailed derivations, refer to <d-cite key="brenner:2002"/>. In this experiment, we adjusted the frequency and amplitude of ultrasonic waves ($$P(t)$$) while keeping other parameters constant (e.g., using water as the liquid) until light emission was observed.
 
 This equation governs the bubble dynamics and indirectly determines the bubble's internal temperature (assuming adiabatic compression). However, the emitted light phenomenon also depends on the gas atom species. The light's wavelength is influenced by bremsstrahlung radiation and electronic transitions between energy levels, which the Rayleigh-Plesset equation does not account for. Therefore, predicting the light spectrum requires detailed models of the emission mechanisms, as discussed in <d-cite key="brenner:2002"/>.
 
@@ -83,7 +83,7 @@ This equation governs the bubble dynamics and indirectly determines the bubble's
 12. Over time, water temperature rises, and more air dissolves into the water, forming bubbles of various sizes. These bubbles affect waveforms, making it difficult to maintain a sinusoidal pattern. Replace the water immediately.
 13. Once a blue light spot is visually confirmed from Step 10, capture it using a camera with a long exposure.
 
-Note: Procedures referenced from  <d-cite key="geisler:1996"/>.
+Note: For further detailed procedures, please refer to <d-cite key="geisler:1996"/>.
 
 <a name="fig-1"></a>
 <div class="row">
