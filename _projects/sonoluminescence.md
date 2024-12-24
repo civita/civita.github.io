@@ -20,6 +20,8 @@ bibliography: project_sonoluminescence.bib
 toc:
   - name: Abstract
   - name: Theories
+      subsections:
+      - name: Bubble Radius Dynamics
   - name: Procedures
   - name: Results
   - name: Discussion and improvements
@@ -88,7 +90,7 @@ Note: Procedures referenced from  <d-cite key="geisler:1996"/>.
     <div class="col-sm-3 mt-3 mt-md-0">
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence-procedures-1.jpg" width="400" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_sonoluminescence/procedures-1.jpg" width="400" class="img-fluid z-depth-1" %}
     </div>
     <div class="col-sm-3 mt-3 mt-md-0">
     </div>
