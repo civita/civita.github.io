@@ -20,7 +20,7 @@ bibliography: project_sonoluminescence.bib
 toc:
   - name: Abstract
   - name: Theories
-      subsections:
+    subsections:
       - name: Bubble Radius Dynamics
   - name: Procedures
   - name: Results
