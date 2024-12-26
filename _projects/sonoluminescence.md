@@ -384,4 +384,62 @@ Since we only observed sonoluminescence in the final week, we lacked the time to
 
 After consulting with the teaching assistant, we learned that argon gas is available. However, dissolving it into water poses a challenge. According to Raoult's Law, solubility is proportional to gas partial pressure. Therefore, it might be possible to seal the opening of the resonance chamber to create an airtight environment, then introduce argon gas. This approach would require considerable effort, and unfortunately, we did not have the time to pursue it.
 
+### How do bubble radius and pressure vary in different solutions (Rayleigh-Plesset equation)?
+
+Using MATLAB, we simulated the radius and pressure changes for water, glycerol, and sulfuric acid. The basic properties of these solutions are shown in Table [1](#tab-1). Simulation parameters are detailed in Figure [16](#fig-16), and the results are plotted in Figure [17](#fig-17). The simulations show that higher viscosity coefficients lead to smaller amplitude oscillations in bubble radius and faster damping.  
+
+<a name="tab-1"></a>
+
+|                 | Water        | Glycerol       | Sulfuric Acid |
+|-----------------|--------------|----------------|---------------|
+| Density ($$kg/m^3$$) | 1000         | 1261           | 1841          |
+| Viscosity ($$Pa \cdot s$$) | $$1.00 \times 10^{-3}$$ | $$1.42 \times 10^{0}$$ | $$2.42 \times 10^{-2}$$ |
+| Sound speed ($$m/s$$) | 1500         | 1920           | 1257          |
+
+<div class="caption">
+    Table 1: Basic properties of water, glycerol, and sulfuric acid at room temperature.
+</div>
+
+<a name="fig-16"></a>
+<div class="row">
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/qa-0.png" width="400" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+</div>
+<div class="caption">
+    Figure 16: MATLAB simulation parameters.
+</div>
+
+<a name="fig-17"></a>
+<div class="row">
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/qa-2.png" width="400" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+</div>
+<div class="caption">
+    Figure 17: Radius and pressure variations for water (blue, +), glycerol (orange, o), and sulfuric acid (yellow, x).
+</div>
+
+### What is the bubble temperature? Can it achieve nuclear fusion?
+
+From studies published in *Nature* \cite{flannigan:2005, didenko:2000}, bubbles in water typically contain \(N_2\), \(O_2\), \(Ar (\sim 1\%)\), and water vapor, with proportions similar to atmospheric levels. During rapid collapse (sonolysis), \(N_2\) and \(O_2\) react to form \(NO_x\), which dissolves into water, leaving \(Ar\) as the primary gas within the bubble. This suggests that \(Ar\), a monoatomic gas, is the main contributor to luminescence.
+
+**Conditions for observing sonoluminescence in other liquids**:  
+- **Low vapor pressure**: Prevents excessive vapor from entering the bubble, ensuring \(Ar\) remains the dominant component. For example, using alcohol would introduce \(C_2H_5OH\) vapor, which absorbs heat through chemical reactions during compression, reducing bubble temperature and suppressing luminescence. Inert gases avoid this issue.  
+- **Polarity**: Ensures that \(NO_x\) gases dissolve in the liquid, preventing residue in the bubble.  
+
+Researchers used sulfuric acid solutions (vapor pressure \(0.001 \, \text{mmHg}\), much lower than water’s \(17 \, \text{mmHg}\)) and mixed inert gases \(Xe\) and \(Ar\) in varying proportions. They observed luminescence intensities 1500–2700 times greater than water bubbles and identified spectral lines characteristic of \(Ar\), as well as continuous blackbody radiation.  
+
+However, producing these discrete spectral lines requires energy \(\gg 13 \, \text{eV}\), far exceeding the blackbody radiation estimate (\(< 1 \, \text{eV}\)). Moreover, blackbody radiation and bubble collapse do not occur simultaneously. Researchers detected \(O_2^+\) lines, requiring at least \(18 \, \text{eV}\), suggesting high-energy processes involving free electrons and atom collisions. This confirms the bubble interior is in a plasma state.  
+
+As for cold nuclear fusion, the inability to estimate temperatures accurately and the transient nature of luminescence remain obstacles under investigation.
+
 ## Conclusions
