@@ -128,7 +128,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0"><a name="fig-2d"></a>
-        {% include figure.html path="assets/img/project_sonoluminescence/results/5_b.png" title="d" class="img-fluid z-depth-1" %}<br/>d
+        {% include figure.html path="assets/img/project_sonoluminescence/results/5_b.png" title="d" class="img-fluid z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0"><a name="fig-2e"></a>
         {% include figure.html path="assets/img/project_sonoluminescence/results/8_b.png" title="e" class="img-fluid z-depth-1" %}
@@ -146,6 +146,70 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
     <div class="col-sm mt-3 mt-md-0 caption">
         f
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2g"></a>
+        {% include figure.html path="assets/img/project_sonoluminescence/results/10_b.png" title="g" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2h"></a>
+        {% include figure.html path="assets/img/project_sonoluminescence/results/11_b.png" title="h" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2i"></a>
+        {% include figure.html path="assets/img/project_sonoluminescence/results/12_b.png" title="i" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 caption">
+        g
+    </div>
+    <div class="col-sm mt-3 mt-md-0 caption">
+        h
+    </div>
+    <div class="col-sm mt-3 mt-md-0 caption">
+        i
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2j"></a>
+        {% include figure.html path="assets/img/project_sonoluminescence/results/13_b.png" title="j" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2k"></a>
+        {% include figure.html path="assets/img/project_sonoluminescence/results/14_b.png" title="k" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2l"></a>
+        {% include figure.html path="assets/img/project_sonoluminescence/results/15_b.png" title="l" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 caption">
+        j
+    </div>
+    <div class="col-sm mt-3 mt-md-0 caption">
+        k
+    </div>
+    <div class="col-sm mt-3 mt-md-0 caption">
+        l
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2m"></a>
+        {% include figure.html path="assets/img/project_sonoluminescence/results/16_b.png" title="m" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2n"></a>
+        {% include figure.html path="assets/img/project_sonoluminescence/results/17_b.png" title="n" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 caption">
+        m
+    </div>
+    <div class="col-sm mt-3 mt-md-0 caption">
+        n
+    </div>
+    <div class="col-sm mt-3 mt-md-0 caption">
     </div>
 </div>
 <div class="caption">
