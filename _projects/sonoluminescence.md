@@ -25,6 +25,9 @@ toc:
   - name: Procedures
   - name: Results
   - name: Discussion and improvements
+      subsections:
+      - name: How do bubble radius and pressure vary in different solutions?
+      - name: What is the bubble temperature? Can it achieve nuclear fusion?
   - name: Conclusions
 ---
 
