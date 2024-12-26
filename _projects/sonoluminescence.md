@@ -109,8 +109,6 @@ This equation governs the bubble dynamics and indirectly determines the bubble's
 
 Note: For further detailed procedures, please refer to <d-cite key="geisler:1996"/>.
 
-<a name="section-results"></a>
-
 ## Results
 
 In the third week, we observed multiple instances of bubble luminescence. Images were captured using a Canon EOS 700D camera with a Canon 24–70mm F4L lens (the white circle marks the bubble's position). To better analyze the bubble's color and shape, we cropped the original images. Close-up views of the bubbles are shown in Figures [2](#fig-2) and [3](#fig-3).
@@ -463,15 +461,13 @@ As for cold nuclear fusion, the inability to estimate temperatures accurately an
 
 This experiment was a challenging task. At the beginning of the semester, the teaching assistant mentioned that experiments in Group B were particularly challenging, and indeed, we made no progress in the first week. We consulted online guides and suggestions from other groups, gradually gaining a better understanding of the procedures. The steps sounded simple when described online or by classmates, leading us to believe that success was guaranteed if we followed them.
 
-On **5/10**, we returned to the lab in the evening to conduct the experiment but, despite our efforts, failed to observe any luminescence (see detailed process in Section [Journal](#section-journal)). At the time, we followed the parameters of previous successful cases, including water levels, transducer positions, and frequencies. On **5/11**, we worked from 1 PM to 9 PM but still saw no results. This made us question why we couldn’t replicate the phenomenon despite adhering to the recommended steps. 
+On **5/10**, we returned to the lab in the evening to conduct the experiment but, despite our efforts, failed to observe any luminescence (see detailed process in Section [Journal](#journal)). At the time, we followed the parameters of previous successful cases, including water levels, transducer positions, and frequencies. On **5/11**, we worked from 1 PM to 9 PM but still saw no results. This made us question why we couldn’t replicate the phenomenon despite adhering to the recommended steps. 
 
 Driven by curiosity and a strong desire to observe luminescence, we scheduled a session with the teaching assistant on **5/12**, starting at 9 AM. We adjusted various parameters, invited students from other groups for guidance, and asked them to help verify whether the luminescence was visible (as prior reports mentioned that dim luminescence could appear as an optical illusion). Despite these efforts, we still didn’t achieve success.
 
 Finally, on **5/18**, we observed luminescence! When one of our team members shouted, “I see it!”, another thought it was a joke, but upon verification, it turned out to be true. After further testing, we concluded that water level was the critical factor. Overjoyed, we captured the phenomenon using a camera—something that no group had successfully done before.
 
 This experiment taught us a great deal. Many experimental variables interact with each other (e.g., power strips affecting waveforms), and even when following previous groups' steps, results are not always consistent. We identified several areas for improvement, such as measuring temperature or using alternative solutions. We hope future groups can validate our procedures, build upon our findings, and further refine this experiment to achieve more comprehensive results.
-
-<a name="section-journal"></a>
 
 ## Journal
 
@@ -498,7 +494,7 @@ This was our final day of experimentation. Initially, we were prepared to accept
 
 Around 3 PM, we replaced the water, raising the level to ~10 cm. Following the procedures, including degassing for over 20 minutes and transferring water to the resonance chamber via a siphon, we found it easier to adjust the transducer to the optimal position (near the chamber's center, with an amplitude of ~1V). At approximately 3:30 PM, team member Johnson observed luminescence! The light was blue-white, located near the transducer, and significantly brighter than expected, leaving no room for doubt. After repeated confirmations by team member Michael, we verified that it was indeed a glowing bubble. Although we invited the teaching assistant to observe, the bubble had become unstable by then, and they couldn’t see it.  
 
-We continued heating, but as the water temperature rose, the waveform became increasingly distorted. After discussion, we decided to maintain the current water level and transducer position for another water replacement. At around 5 PM, we observed luminescence again and invited the teaching assistant and other group members to confirm it, all of whom verified the phenomenon. Using a camera, we captured the glowing bubbles, with the results and parameters documented in Section [Results](#section-results). Additionally, we observed two glowing bubbles simultaneously.  
+We continued heating, but as the water temperature rose, the waveform became increasingly distorted. After discussion, we decided to maintain the current water level and transducer position for another water replacement. At around 5 PM, we observed luminescence again and invited the teaching assistant and other group members to confirm it, all of whom verified the phenomenon. Using a camera, we captured the glowing bubbles, with the results and parameters documented in Section [Results](#results). Additionally, we observed two glowing bubbles simultaneously.  
 
 Following this, we hypothesized that water level might determine the experiment's success. We lowered the water to ~9 cm and resumed the experiment but observed no luminescence. Gradually increasing the water back to 10 cm and reheating produced luminescence again! Based on this, we recommend future groups adjust the water level if their experiments are unsuccessful.  
 
