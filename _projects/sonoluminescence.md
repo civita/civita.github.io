@@ -105,7 +105,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
 
 <a name="fig-1"></a>
 <div class="row">
-    <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/project_sonoluminescence/procedures/1.jpg" width="400" class="img-fluid z-depth-1" %}
     </div>
 </div>
@@ -126,7 +126,7 @@ Based on the images, we outlined the approximate positions of the luminescent bu
 <a name="fig-2"></a>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/results/1_b.png" title="1_b" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_sonoluminescence/results/1_b.png" title="1_b" class="img-fluid z-depth-1" %}a
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/project_sonoluminescence/results/2_b.png" title="2_b" class="img-fluid z-depth-1" %}
