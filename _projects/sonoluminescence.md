@@ -362,4 +362,26 @@ At 18:20, an image (Figure [13](#fig-13)) accidentally captured environmental li
 Based on the images, we outlined the approximate positions of the luminescent bubbles relative to the water surface and the metal rod in Figure [14](#fig-14). Most bubbles were located beneath the metal rod, though some images could not pinpoint the luminescent position.
 
 ## Discussion and improvements
+
+Since we only observed sonoluminescence in the final week, we lacked the time to conduct additional experiments. However, we propose the following ideas for future exploration, which may be helpful for other groups:
+
+1. High-Speed Camera for Capturing Bubble Oscillations: observing the expansion and contraction of bubbles can confirm radius changes and estimate the gas temperature inside the bubble. Additionally, this would reveal the emission cycle of the light. However, as the cycle duration is approximately tens of microseconds ($$\mu s$$), a high-speed camera with at least 100,000 fps is required. Such cameras are extremely rare, making this suggestion challenging to implement.
+2. Adding Inert Gases: according to the experimental principles, while the type of gas does not influence the bubble radius (as governed by the Rayleigh-Plesset equation), it is closely related to light emission. Experiments have shown that the proportion of inert gases dissolved in water affects luminescence intensity <d-cite key="brenner:2002"/>, as illustrated below:
+
+<a name="fig-15"></a>
+<div class="row">
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/error-1.png" width="400" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+</div>
+<div class="caption">
+    Figure 15: Relationship between inert gases (Ar, Xe) and luminescence intensity <d-cite key="brenner:2002"/>.
+</div>
+
+After consulting with the teaching assistant, we learned that argon gas is available. However, dissolving it into water poses a challenge. According to Raoult's Law, solubility is proportional to gas partial pressure. Therefore, it might be possible to seal the opening of the resonance chamber to create an airtight environment, then introduce argon gas. This approach would require considerable effort, and unfortunately, we did not have the time to pursue it.
+
 ## Conclusions
