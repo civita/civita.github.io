@@ -3,9 +3,9 @@ layout: distill
 title: Sonoluminescence Experiment
 description: Observing sonoluminescence using a cylindrical glass container with degassed water
 importance: 5
-category: hidden
+category: school
 date: 2016-05-25
-img: assets/img/project_sonoluminescence-preview.png
+img: assets/img/project_sonoluminescence/preview.gif
 
 authors:
   - name: Michael Chang
