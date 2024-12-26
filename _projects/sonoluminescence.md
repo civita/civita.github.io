@@ -34,6 +34,7 @@ toc:
       - name: 5/4
       - name: 5/10
       - name: 5/11
+      - name: 5/12
       - name: 5/18
 ---
 
@@ -254,8 +255,13 @@ In the third week, we observed multiple instances of bubble luminescence. Images
         {% include figure.html path="assets/img/project_sonoluminescence/results/1.jpg" class="img-fluid z-depth-1" %}
     </div>
 </div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/procedures/3.jpg" class="img-fluid z-depth-1" %}
+    </div>
+</div>
 <div class="caption">
-    Figure 4: First observed luminescent bubble at 15:45 (f/8, 25s, ISO 640). Enlarged result in Figure 2a.
+    Figure 4: First observed luminescent bubble at 15:45 (f/8, 25s, ISO 640). Oscilloscope waveform captured at 15:30. Enlarged result in Figure 2a.
 </div>
 
 <a name="fig-5"></a>
@@ -482,7 +488,9 @@ Following the steps from **5/4**, we continued the experiment after the Tuesday 
 ### 5/11
 
 On this day, we invited a team member from a previous successful group to share their process. They explained that luminescence wasn’t observed when the waveform showed significant changes but rather when it closely resembled the original sine wave with minor distortions. This indicated the bubble's presence at critical voltage, which could produce luminescence. With their guidance, we continued the experiment but were still unable to observe any glowing bubbles.  
-- **5/12**  On Thursday, we started the experiment at 9 AM with the teaching assistant. After heating, the water temperature rose, and excessive gas dissolved into the resonance chamber, distorting the waveform in ways that couldn’t be corrected using standard methods. We had to replace the water repeatedly, each time requiring extensive adjustments. Despite working from 9 AM to 8 PM, we still observed no glowing bubbles.
+
+### 5/12
+On Thursday, we started the experiment at 9 AM with the teaching assistant. After heating, the water temperature rose, and excessive gas dissolved into the resonance chamber, distorting the waveform in ways that couldn’t be corrected using standard methods. We had to replace the water repeatedly, each time requiring extensive adjustments. Despite working from 9 AM to 8 PM, we still observed no glowing bubbles.
 
 ### 5/18 
 
