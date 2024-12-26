@@ -30,6 +30,11 @@ toc:
       - name: What is the bubble temperature? Can it achieve nuclear fusion?
   - name: Conclusions
   - name: Journal
+    subsections:
+      - name: 5/4
+      - name: 5/10
+      - name: 5/11
+      - name: 5/18
 ---
 
 ## Abstract
@@ -464,27 +469,29 @@ This experiment taught us a great deal. Many experimental variables interact wit
 
 ## Journal
 
-- **5/4**  
-  During the first week, after understanding the experimental principles and procedures, we began the degassing process. However, we noticed the oscilloscope waveform was unstable (the transducer couldn't be mounted correctly, and pressing the heating button caused the waveform to "shift"). With the teaching assistant's help, we switched to another oscilloscope and recalibrated it, but the issue persisted. We later found that the power strip connected to the oscilloscope had a flickering indicator light, suggesting electrical interference. Plugging the oscilloscope directly into a wall socket resolved the issue.  
+### 5/4
 
-  Pressing the heating button caused the heating wire's temperature to rise, producing a plastic smell. To avoid melting the wire's plastic coating and causing a short circuit, we replaced the wire with a thicker, more robust one. Throughout the day, we replaced the water multiple times, each requiring significant adjustments (e.g., mounting the transducer at the optimal position and avoiding resonance with other objects). While pressing the heating button caused waveform changes indicating bubble formation, we observed no luminescence by 9 PM. We scheduled the next session for the following Tuesday evening.  
+During the first week, after understanding the experimental principles and procedures, we began the degassing process. However, we noticed the oscilloscope waveform was unstable (the transducer couldn't be mounted correctly, and pressing the heating button caused the waveform to "shift"). With the teaching assistant's help, we switched to another oscilloscope and recalibrated it, but the issue persisted. We later found that the power strip connected to the oscilloscope had a flickering indicator light, suggesting electrical interference. Plugging the oscilloscope directly into a wall socket resolved the issue.  
 
-- **5/10**  
-  Following the steps from **5/4**, we continued the experiment after the Tuesday group finished. However, we still observed no luminescence and left the lab at 9 PM.  
+Pressing the heating button caused the heating wire's temperature to rise, producing a plastic smell. To avoid melting the wire's plastic coating and causing a short circuit, we replaced the wire with a thicker, more robust one. Throughout the day, we replaced the water multiple times, each requiring significant adjustments (e.g., mounting the transducer at the optimal position and avoiding resonance with other objects). While pressing the heating button caused waveform changes indicating bubble formation, we observed no luminescence by 9 PM. We scheduled the next session for the following Tuesday evening.  
 
-- **5/11**  
-  On this day, we invited a team member from a previous successful group to share their process. They explained that luminescence wasn’t observed when the waveform showed significant changes but rather when it closely resembled the original sine wave with minor distortions. This indicated the bubble's presence at critical voltage, which could produce luminescence. With their guidance, we continued the experiment but were still unable to observe any glowing bubbles.  
+### 5/10
 
-- **5/12**  
-  On Thursday, we started the experiment at 9 AM with the teaching assistant. After heating, the water temperature rose, and excessive gas dissolved into the resonance chamber, distorting the waveform in ways that couldn’t be corrected using standard methods. We had to replace the water repeatedly, each time requiring extensive adjustments. Despite working from 9 AM to 8 PM, we still observed no glowing bubbles.  
+Following the steps from **5/4**, we continued the experiment after the Tuesday group finished. However, we still observed no luminescence and left the lab at 9 PM.
 
-- **5/18**  
-  This was our final day of experimentation. Initially, we were prepared to accept failure if we didn’t succeed. Previous water levels were set to ~9.2 cm, based on prior groups' reports of successful luminescence. After reconsidering, we decided to adjust the water level.  
+### 5/11
 
-  Around 3 PM, we replaced the water, raising the level to ~10 cm. Following the procedures, including degassing for over 20 minutes and transferring water to the resonance chamber via a siphon, we found it easier to adjust the transducer to the optimal position (near the chamber's center, with an amplitude of ~1V). At approximately 3:30 PM, team member Yan Jingzhe observed luminescence! The light was blue-white, located near the transducer, and significantly brighter than expected, leaving no room for doubt. After repeated confirmations by team member, we verified that it was indeed a glowing bubble. Although we invited the teaching assistant to observe, the bubble had become unstable by then, and they couldn’t see it.  
+On this day, we invited a team member from a previous successful group to share their process. They explained that luminescence wasn’t observed when the waveform showed significant changes but rather when it closely resembled the original sine wave with minor distortions. This indicated the bubble's presence at critical voltage, which could produce luminescence. With their guidance, we continued the experiment but were still unable to observe any glowing bubbles.  
+- **5/12**  On Thursday, we started the experiment at 9 AM with the teaching assistant. After heating, the water temperature rose, and excessive gas dissolved into the resonance chamber, distorting the waveform in ways that couldn’t be corrected using standard methods. We had to replace the water repeatedly, each time requiring extensive adjustments. Despite working from 9 AM to 8 PM, we still observed no glowing bubbles.
 
-  We continued heating, but as the water temperature rose, the waveform became increasingly distorted. After discussion, we decided to maintain the current water level and transducer position for another water replacement. At around 5 PM, we observed luminescence again and invited the teaching assistant and other group members to confirm it, all of whom verified the phenomenon. Using a camera, we captured the glowing bubbles, with the results and parameters documented in Section [Results](#sec-results). Additionally, we observed two glowing bubbles simultaneously.  
+### 5/18 
 
-  Following this, we hypothesized that water level might determine the experiment's success. We lowered the water to ~9 cm and resumed the experiment but observed no luminescence. Gradually increasing the water back to 10 cm and reheating produced luminescence again! Based on this, we recommend future groups adjust the water level if their experiments are unsuccessful.  
+This was our final day of experimentation. Initially, we were prepared to accept failure if we didn’t succeed. Previous water levels were set to ~9.2 cm, based on prior groups' reports of successful luminescence. After reconsidering, we decided to adjust the water level.  
 
-  In the first week, we had considered improvements to make after observing luminescence, but since we only succeeded in the third week, there wasn’t enough time to implement them. We hope future groups can continue this work and refine the experiment further.
+Around 3 PM, we replaced the water, raising the level to ~10 cm. Following the procedures, including degassing for over 20 minutes and transferring water to the resonance chamber via a siphon, we found it easier to adjust the transducer to the optimal position (near the chamber's center, with an amplitude of ~1V). At approximately 3:30 PM, team member Johnson observed luminescence! The light was blue-white, located near the transducer, and significantly brighter than expected, leaving no room for doubt. After repeated confirmations by team member Michael, we verified that it was indeed a glowing bubble. Although we invited the teaching assistant to observe, the bubble had become unstable by then, and they couldn’t see it.  
+
+We continued heating, but as the water temperature rose, the waveform became increasingly distorted. After discussion, we decided to maintain the current water level and transducer position for another water replacement. At around 5 PM, we observed luminescence again and invited the teaching assistant and other group members to confirm it, all of whom verified the phenomenon. Using a camera, we captured the glowing bubbles, with the results and parameters documented in Section [Results](#sec-results). Additionally, we observed two glowing bubbles simultaneously.  
+
+Following this, we hypothesized that water level might determine the experiment's success. We lowered the water to ~9 cm and resumed the experiment but observed no luminescence. Gradually increasing the water back to 10 cm and reheating produced luminescence again! Based on this, we recommend future groups adjust the water level if their experiments are unsuccessful.  
+
+In the first week, we had considered improvements to make after observing luminescence, but since we only succeeded in the third week, there wasn’t enough time to implement them. We hope future groups can continue this work and refine the experiment further.
