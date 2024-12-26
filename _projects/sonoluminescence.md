@@ -321,11 +321,45 @@ Figure [4](#fig-4) depicts the first observed luminescent bubble. Upon magnifica
 
 At 18:14, two luminescent bubbles coexisted in the container, as shown in Figures [10](#fig-10) and [11](#fig-11) ([3a](#fig-3a) and [3b](#fig-3b), respectively).
 
-At 18:25, a bubble persisted for an extended duration of three minutes. Images are provided in Figures \ref{fig:results:9}, \ref{fig:results:10}, and \ref{fig:results:11} (\ref{fig:results:9_b}, \ref{fig:results:10_b}, and \ref{fig:results:11_b}). The luminescent color of the bubbles was consistently blue-white, as seen in close-ups (\ref{fig:results:b_1} and \ref{fig:results:b_2}).
+<a name="fig-12"></a>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/9.jpg" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Figure 12: Observed luminescent bubble at 18:25 (f/11, 10s, ISO 3200). Enlarged result in Figure 2f.
+</div>
 
-At 18:20, an image (Figure \ref{fig:results:17}) accidentally captured environmental light entering through gaps in the black fabric. Surprisingly, the bubble was still visible, and its brightness was higher than initially expected. Luminescence was easily noticeable whenever it occurred.
+At 18:25, a bubble persisted for an extended duration of three minutes. Images are provided in Figures [12](#fig-12), [8](#fig-8), and [9](#fig-9) ([2f](#fig-2f), [2g](#fig-2g), and [2h](#fig-2h)). The luminescent color of the bubbles was consistently blue-white.
 
-Based on the images, we outlined the approximate positions of the luminescent bubbles relative to the water surface and the metal rod in Figure \ref{fig:results:location}. Most bubbles were located beneath the metal rod, though some images could not pinpoint the luminescent position.
+<a name="fig-13"></a>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/17.jpg" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Figure 13: Observed luminescent bubble at 18:20 (f/7.1, 6s, ISO 3200). Enlarged result in Figure 2n.
+</div>
+
+At 18:20, an image (Figure [13](#fig-13)) accidentally captured environmental light entering through gaps in the black fabric. Surprisingly, the bubble was still visible, and its brightness was higher than initially expected. Luminescence was easily noticeable whenever it occurred.
+
+<a name="fig-14"></a>
+<div class="row">
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/procedures/2.jpg" width="400" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+</div>
+<div class="caption">
+    Figure 14: Approximate positions of the luminescent bubbles relative to the water surface and the metal rod.
+</div>
+
+Based on the images, we outlined the approximate positions of the luminescent bubbles relative to the water surface and the metal rod in Figure [14](#fig-14). Most bubbles were located beneath the metal rod, though some images could not pinpoint the luminescent position.
 
 ## Discussion and improvements
 ## Conclusions
