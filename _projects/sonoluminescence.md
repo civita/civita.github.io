@@ -90,7 +90,7 @@ Note: For further detailed procedures, please refer to <d-cite key="geisler:1996
     <div class="col-sm-3 mt-3 mt-md-0">
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/procedures-1.jpg" width="400" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_sonoluminescence/procedures/1.jpg" width="400" class="img-fluid z-depth-1" %}
     </div>
     <div class="col-sm-3 mt-3 mt-md-0">
     </div>
@@ -103,21 +103,21 @@ Note: For further detailed procedures, please refer to <d-cite key="geisler:1996
 
 In the third week, we observed multiple instances of bubble luminescence. Images were captured using a CANON EOS 700D camera with a CANON 24–70mm F4L lens (the white circle marks the bubble's position). To better analyze the bubble's color and shape, we cropped the original images. Close-up views of the bubbles are shown in Figures \ref{fig:results:b_1} and \ref{fig:results:b_2}.
 
-<a name="fig-1"></a>
+<a name="fig-2"></a>
 <div class="row">
     <div class="col-sm-3 mt-3 mt-md-0">
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/procedures-1.jpg" width="400" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_sonoluminescence/result/1.jpg" width="400" class="img-fluid z-depth-1" %}
     </div>
     <div class="col-sm-3 mt-3 mt-md-0">
     </div>
 </div>
 <div class="caption">
-    Figure 1: Resonance chamber setup. The heating spring is visible below the metal rod.
+    Figure 2: First observed luminescent bubble at 15:34 (f/6, 25s, ISO 640).
 </div>
 
-Figure [2](#fig-2) depicts the first observed luminescent bubble. Upon magnification (\ref{fig:results:1_b}), the bubble appeared elongated. Similar phenomena were observed in Figures \ref{fig:results:2}, \ref{fig:results:10}, and \ref{fig:results:11} (\ref{fig:results:2_b}, \ref{fig:results:10_b}, and \ref{fig:results:11_b}, respectively). The elongation might be due to camera movement during exposure or bubble oscillations.
+Figure [2](#fig-2) depicts the first observed luminescent bubble. Upon magnification, (Figure [3a] (#fig-3a)) the bubble appeared elongated. Similar phenomena were observed in Figures \ref{fig:results:2}, \ref{fig:results:10}, and \ref{fig:results:11} (\ref{fig:results:2_b}, \ref{fig:results:10_b}, and \ref{fig:results:11_b}, respectively). The elongation might be due to camera movement during exposure or bubble oscillations.
 
 At 18:14, two luminescent bubbles coexisted in the container, as shown in Figures \ref{fig:results:6} and \ref{fig:results:7} (\ref{fig:results:6_b} and \ref{fig:results:7_b}, respectively).
 
@@ -127,7 +127,7 @@ At 18:20, an image (Figure \ref{fig:results:17}) accidentally captured environme
 
 Based on the images, we outlined the approximate positions of the luminescent bubbles relative to the water surface and the metal rod in Figure \ref{fig:results:location}. Most bubbles were located beneath the metal rod, though some images could not pinpoint the luminescent position.
 
-<a name="fig-2"></a>
+<a name="fig-3"></a>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/project_sonoluminescence/results/1_b.png" title="1_b" class="img-fluid z-depth-1" %}
@@ -141,17 +141,17 @@ Based on the images, we outlined the approximate positions of the luminescent bu
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 caption">
-        1_b
+        <a name="fig-3a">3a</a>
     </div>
     <div class="col-sm mt-3 mt-md-0 caption">
-        2_b
+        <a name="fig-3b">3b</a>
     </div>
     <div class="col-sm mt-3 mt-md-0 caption">
-        3_b
+        <a name="fig-3c">3c</a>
     </div>
 </div>
 <div class="caption">
-    Figure 2: Enlarged results.
+    Figure 3: Enlarged results.
 </div>
 
 
