@@ -244,7 +244,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 4: First observed luminescent bubble at 15:34 (f/6, 25s, ISO 640). Enlarged result in Figure [2a](#fig-2a).
+    Figure 4: First observed luminescent bubble at 15:45 (f/8, 25s, ISO 640). Enlarged result in Figure [2a](#fig-2a).
 </div>
 
 <a name="fig-5"></a>
@@ -254,7 +254,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 5: Observed luminescent bubble at 17:00 (f/5.6, 4s, ISO 3200). Enlarged result in Figure [2b](#fig-2b).
+    Figure 5: Observed luminescent bubble at 17:11 (f/7.1, 6s, ISO 3200). Enlarged result in Figure [2b](#fig-2b).
 </div>
 
 <a name="fig-6"></a>
@@ -264,7 +264,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 6: Observed luminescent bubble at 17:01 (f/5.6, 4s, ISO 3200). Enlarged result in Figure [2c](#fig-2c).
+    Figure 6: Observed luminescent bubble at 17:12 (f/7.1, 6s, ISO 3200). Enlarged result in Figure [2c](#fig-2c).
 </div>
 
 <a name="fig-7"></a>
@@ -274,32 +274,52 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 7: Observed luminescent bubble at 18:03 (f/5.6, 4s, ISO 3200). Enlarged result in Figure [2d](#fig-2d).
-</div>
-
-<a name="fig-7"></a>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/results/5.jpg" class="img-fluid z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Figure 7: Observed luminescent bubble at 18:14 (f/5.6, 4s, ISO 3200). Enlarged result in Figure [3a](#fig-3a).
+    Figure 7: Observed luminescent bubble at 18:14 (f/7.1, 6s, ISO 3200). Enlarged result in Figure [2d](#fig-2d).
 </div>
 
 <a name="fig-8"></a>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/10.jpg" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Figure 8: Observed luminescent bubble at 18:26 (f/10, 6s, ISO 6400). Enlarged result in Figure [2g](#fig-2g).
+</div>
+
+<a name="fig-9"></a>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/11.jpg" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Figure 9: Observed luminescent bubble at 18:27 (f/10, 6s, ISO 6400). Enlarged result in Figure [2h](#fig-2h).
+</div>
+
+Figure [4](#fig-4) depicts the first observed luminescent bubble. Upon magnification (Figure [2a](#fig-2a)) the bubble appeared elongated. Similar phenomena were observed in Figures [5](#fig-5), \ref[8](#fig-8), and [5](#fig-9) ([2d](#fig-2d), [2g](#fig-2g), and [2h](#fig-2h), respectively). The elongation might be due to camera movement during exposure or bubble oscillations.
+
+<a name="fig-10"></a>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/5.jpg" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Figure 10: Observed luminescent bubbles at 18:14 (f/5.6, 4s, ISO 3200). Enlarged result in Figure [3a](#fig-3a).
+</div>
+
+<a name="fig-11"></a>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/project_sonoluminescence/results/6.jpg" class="img-fluid z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Figure 8: Observed luminescent bubble at 18:14 (f/5.6, 4s, ISO 3200). Enlarged result in Figure [3b](#fig-3b).
+    Figure 11: Observed luminescent bubbles at 18:14 (f/5.6, 4s, ISO 3200). Enlarged result in Figure [3b](#fig-3b).
 </div>
 
-Figure [4](#fig-4) depicts the first observed luminescent bubble. Upon magnification (Figure [2a](#fig-2a)) the bubble appeared elongated. Similar phenomena were observed in Figures [5](#fig-5), \ref{fig:results:10}, and \ref{fig:results:11} (\ref{fig:results:2_b}, \ref{fig:results:10_b}, and \ref{fig:results:11_b}, respectively). The elongation might be due to camera movement during exposure or bubble oscillations.
-
-At 18:14, two luminescent bubbles coexisted in the container, as shown in Figures [7](#fig-7) and [8](#fig-8) ([3a](#fig-3a) and [3b](#fig-3b), respectively).
+At 18:14, two luminescent bubbles coexisted in the container, as shown in Figures [10](#fig-10) and [11](#fig-11) ([3a](#fig-3a) and [3b](#fig-3b), respectively).
 
 At 18:25, a bubble persisted for an extended duration of three minutes. Images are provided in Figures \ref{fig:results:9}, \ref{fig:results:10}, and \ref{fig:results:11} (\ref{fig:results:9_b}, \ref{fig:results:10_b}, and \ref{fig:results:11_b}). The luminescent color of the bubbles was consistently blue-white, as seen in close-ups (\ref{fig:results:b_1} and \ref{fig:results:b_2}).
 
