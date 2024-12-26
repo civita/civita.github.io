@@ -173,17 +173,35 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     Figure 3: Enlarged results.
 </div>
 
-
 <a name="fig-4"></a>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/results/1.jpg" width="400" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_sonoluminescence/results/1.jpg" class="img-fluid z-depth-1" %}
     </div>
 </div>
 <div class="caption">
     Figure 4: First observed luminescent bubble at 15:34 (f/6, 25s, ISO 640).
 </div>
 
+<a name="fig-5"></a>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/2.jpg" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Figure 5: Observed luminescent bubble at 17:00 (f/5.6, 4s, ISO 3200).
+</div>
+
+<a name="fig-6"></a>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/3.jpg" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Figure 6: Observed luminescent bubble at 17:01 (f/5.6, 4s, ISO 3200).
+</div>
 
 Figure [4](#fig-4) depicts the first observed luminescent bubble. Upon magnification (Figure [2a](#fig-2a)) the bubble appeared elongated. Similar phenomena were observed in Figures \ref{fig:results:2}, \ref{fig:results:10}, and \ref{fig:results:11} (\ref{fig:results:2_b}, \ref{fig:results:10_b}, and \ref{fig:results:11_b}, respectively). The elongation might be due to camera movement during exposure or bubble oscillations.
 
