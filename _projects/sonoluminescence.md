@@ -59,6 +59,20 @@ This equation governs the bubble dynamics and indirectly determines the bubble's
 
 ## Procedures
 
+<a name="fig-1"></a>
+<div class="row">
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/procedures/1.jpg" width="400" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm-3 mt-3 mt-md-0">
+    </div>
+</div>
+<div class="caption">
+    Figure 1: Resonance chamber setup. The heating spring is visible below the metal rod.
+</div>
+
 1. Use a large siphon (in the water tank) and a wash bottle to remove water from the resonance chamber (cylindrical glass container). Ensure the heating wire is removed beforehand.
 2. Fill a conical flask about 80% full of water (too much will result in spillage), and degas it using a vacuum pump. Ensure the exhaust pipe is directed outside the room.
 3. After approximately 15 minutes of degassing, transfer the water from the conical flask to the resonance chamber using a thin plastic tube and the siphon principle. For precision, let some water flow out of the siphon tube before placing it in the resonance chamber, as the water inside the tube has not been degassed. Ensure the tube is free of air and its tip remains submerged to avoid air bubbles entering the chamber.
@@ -84,20 +98,6 @@ This equation governs the bubble dynamics and indirectly determines the bubble's
 13. Once a blue light spot is visually confirmed from Step 10, capture it using a camera with a long exposure.
 
 Note: For further detailed procedures, please refer to <d-cite key="geisler:1996"/>.
-
-<a name="fig-1"></a>
-<div class="row">
-    <div class="col-sm-3 mt-3 mt-md-0">
-    </div>
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/procedures/1.jpg" width="400" class="img-fluid z-depth-1" %}
-    </div>
-    <div class="col-sm-3 mt-3 mt-md-0">
-    </div>
-</div>
-<div class="caption">
-    Figure 1: Resonance chamber setup. The heating spring is visible below the metal rod.
-</div>
 
 ## Results
 
@@ -218,19 +218,19 @@ In the third week, we observed multiple instances of bubble luminescence. Images
 
 <a name="fig-3"></a>
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-3a"></a>
         {% include figure.html path="assets/img/project_sonoluminescence/results/6_b.png" title="a" class="img-fluid z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-3b"></a>
         {% include figure.html path="assets/img/project_sonoluminescence/results/7_b.png" title="b" class="img-fluid z-depth-1" %}
     </div>
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 caption">
-        <a name="fig-3a"></a>a
+        a
     </div>
     <div class="col-sm mt-3 mt-md-0 caption">
-        <a name="fig-3b"></a>b
+        b
     </div>
 </div>
 <div class="caption">
@@ -244,7 +244,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 4: First observed luminescent bubble at 15:45 (f/8, 25s, ISO 640). Enlarged result in Figure [2a](#fig-2a).
+    Figure 4: First observed luminescent bubble at 15:45 (f/8, 25s, ISO 640). Enlarged result in Figure 2a.
 </div>
 
 <a name="fig-5"></a>
@@ -254,7 +254,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 5: Observed luminescent bubble at 17:11 (f/7.1, 6s, ISO 3200). Enlarged result in Figure [2b](#fig-2b).
+    Figure 5: Observed luminescent bubble at 17:11 (f/7.1, 6s, ISO 3200). Enlarged result in Figure 2b.
 </div>
 
 <a name="fig-6"></a>
@@ -264,7 +264,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 6: Observed luminescent bubble at 17:12 (f/7.1, 6s, ISO 3200). Enlarged result in Figure [2c](#fig-2c).
+    Figure 6: Observed luminescent bubble at 17:12 (f/7.1, 6s, ISO 3200). Enlarged result in Figure 2c.
 </div>
 
 <a name="fig-7"></a>
@@ -274,7 +274,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 7: Observed luminescent bubble at 18:14 (f/7.1, 6s, ISO 3200). Enlarged result in Figure [2d](#fig-2d).
+    Figure 7: Observed luminescent bubble at 18:14 (f/7.1, 6s, ISO 3200). Enlarged result in Figure 2d.
 </div>
 
 <a name="fig-8"></a>
@@ -284,7 +284,7 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 8: Observed luminescent bubble at 18:26 (f/10, 6s, ISO 6400). Enlarged result in Figure [2g](#fig-2g).
+    Figure 8: Observed luminescent bubble at 18:26 (f/10, 6s, ISO 6400). Enlarged result in Figure 2g.
 </div>
 
 <a name="fig-9"></a>
@@ -294,29 +294,29 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     </div>
 </div>
 <div class="caption">
-    Figure 9: Observed luminescent bubble at 18:27 (f/10, 6s, ISO 6400). Enlarged result in Figure [2h](#fig-2h).
+    Figure 9: Observed luminescent bubble at 18:27 (f/10, 6s, ISO 6400). Enlarged result in Figure 2h.
 </div>
 
-Figure [4](#fig-4) depicts the first observed luminescent bubble. Upon magnification (Figure [2a](#fig-2a)) the bubble appeared elongated. Similar phenomena were observed in Figures [5](#fig-5), \ref[8](#fig-8), and [5](#fig-9) ([2d](#fig-2d), [2g](#fig-2g), and [2h](#fig-2h), respectively). The elongation might be due to camera movement during exposure or bubble oscillations.
+Figure [4](#fig-4) depicts the first observed luminescent bubble. Upon magnification (Figure [2a](#fig-2a)) the bubble appeared elongated. Similar phenomena were observed in Figures [5](#fig-5), [8](#fig-8), and [9](#fig-9) ([2d](#fig-2d), [2g](#fig-2g), and [2h](#fig-2h), respectively). The elongation might be due to camera movement during exposure or bubble oscillations.
 
 <a name="fig-10"></a>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/results/5.jpg" class="img-fluid z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Figure 10: Observed luminescent bubbles at 18:14 (f/5.6, 4s, ISO 3200). Enlarged result in Figure [3a](#fig-3a).
-</div>
-
-<a name="fig-11"></a>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/project_sonoluminescence/results/6.jpg" class="img-fluid z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Figure 11: Observed luminescent bubbles at 18:14 (f/5.6, 4s, ISO 3200). Enlarged result in Figure [3b](#fig-3b).
+    Figure 10: Observed luminescent bubbles at 18:14 (f/7.1, 6s, ISO 3200). Enlarged result in Figure 3a.
+</div>
+
+<a name="fig-11"></a>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/7.jpg" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Figure 11: Observed luminescent bubbles at 18:14 (f/7.1, 6s, ISO 3200). Enlarged result in Figure 3b.
 </div>
 
 At 18:14, two luminescent bubbles coexisted in the container, as shown in Figures [10](#fig-10) and [11](#fig-11) ([3a](#fig-3a) and [3b](#fig-3b), respectively).
