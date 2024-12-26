@@ -117,7 +117,9 @@ In the third week, we observed multiple instances of bubble luminescence. Images
     Figure 2: First observed luminescent bubble at 15:34 (f/6, 25s, ISO 640).
 </div>
 
-Figure [2](#fig-2) depicts the first observed luminescent bubble. Upon magnification, \(Figure [3a] (#fig-3a) \) the bubble appeared elongated. Similar phenomena were observed in Figures \ref{fig:results:2}, \ref{fig:results:10}, and \ref{fig:results:11} (\ref{fig:results:2_b}, \ref{fig:results:10_b}, and \ref{fig:results:11_b}, respectively). The elongation might be due to camera movement during exposure or bubble oscillations.
+
+
+Figure [2](#fig-2) depicts the first observed luminescent bubble. Upon magnification (Figure [3a](#fig-3a)) the bubble appeared elongated. Similar phenomena were observed in Figures \ref{fig:results:2}, \ref{fig:results:10}, and \ref{fig:results:11} (\ref{fig:results:2_b}, \ref{fig:results:10_b}, and \ref{fig:results:11_b}, respectively). The elongation might be due to camera movement during exposure or bubble oscillations.
 
 At 18:14, two luminescent bubbles coexisted in the container, as shown in Figures \ref{fig:results:6} and \ref{fig:results:7} (\ref{fig:results:6_b} and \ref{fig:results:7_b}, respectively).
 
@@ -130,13 +132,13 @@ Based on the images, we outlined the approximate positions of the luminescent bu
 <a name="fig-3"></a>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/results/1_b.png" title="1_b" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_sonoluminescence/results/1_b.png" title="3a" class="img-fluid z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/results/2_b.png" title="2_b" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_sonoluminescence/results/2_b.png" title="3b" class="img-fluid z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/results/3_b.png" title="3_b" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_sonoluminescence/results/3_b.png" title="3c" class="img-fluid z-depth-1" %}
     </div>
 </div>
 <div class="row">
@@ -148,6 +150,28 @@ Based on the images, we outlined the approximate positions of the luminescent bu
     </div>
     <div class="col-sm mt-3 mt-md-0 caption">
         <a name="fig-3c"></a>c
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/5_b.png" title="3d" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/8_b.png" title="3e" class="img-fluid z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/project_sonoluminescence/results/9_b.png" title="3f" class="img-fluid z-depth-1" %}
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 caption">
+        <a name="fig-3d"></a>d
+    </div>
+    <div class="col-sm mt-3 mt-md-0 caption">
+        <a name="fig-3e"></a>e
+    </div>
+    <div class="col-sm mt-3 mt-md-0 caption">
+        <a name="fig-3f"></a>f
     </div>
 </div>
 <div class="caption">
