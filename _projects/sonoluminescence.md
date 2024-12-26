@@ -101,51 +101,51 @@ Note: For further detailed procedures, please refer to <d-cite key="geisler:1996
 
 ## Results
 
-In the third week, we observed multiple instances of bubble luminescence. Images were captured using a CANON EOS 700D camera with a CANON 24–70mm F4L lens (the white circle marks the bubble's position). To better analyze the bubble's color and shape, we cropped the original images. Close-up views of the bubbles are shown in Figures [2](#fig-2) and [3](#fig-3).
+In the third week, we observed multiple instances of bubble luminescence. Images were captured using a Canon EOS 700D camera with a Canon 24–70mm F4L lens (the white circle marks the bubble's position). To better analyze the bubble's color and shape, we cropped the original images. Close-up views of the bubbles are shown in Figures [2](#fig-2) and [3](#fig-3).
 
 <a name="fig-2"></a>
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2a"></a>
         {% include figure.html path="assets/img/project_sonoluminescence/results/1_b.png" title="a" class="img-fluid z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2b"></a>
         {% include figure.html path="assets/img/project_sonoluminescence/results/2_b.png" title="b" class="img-fluid z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2c"></a>
         {% include figure.html path="assets/img/project_sonoluminescence/results/3_b.png" title="c" class="img-fluid z-depth-1" %}
     </div>
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 caption">
-        <a name="fig-2a"></a>a
+        a
     </div>
     <div class="col-sm mt-3 mt-md-0 caption">
-        <a name="fig-2b"></a>b
+        b
     </div>
     <div class="col-sm mt-3 mt-md-0 caption">
-        <a name="fig-2c"></a>c
+        c
     </div>
 </div>
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/results/5_b.png" title="d" class="img-fluid z-depth-1" %}
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2d"></a>
+        {% include figure.html path="assets/img/project_sonoluminescence/results/5_b.png" title="d" class="img-fluid z-depth-1" %}<br/>d
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2e"></a>
         {% include figure.html path="assets/img/project_sonoluminescence/results/8_b.png" title="e" class="img-fluid z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0"><a name="fig-2f"></a>
         {% include figure.html path="assets/img/project_sonoluminescence/results/9_b.png" title="f" class="img-fluid z-depth-1" %}
     </div>
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 caption">
-        <a name="fig-2d"></a>d
+        d
     </div>
     <div class="col-sm mt-3 mt-md-0 caption">
-        <a name="fig-2e"></a>e
+        e
     </div>
     <div class="col-sm mt-3 mt-md-0 caption">
-        <a name="fig-2f"></a>f
+        f
     </div>
 </div>
 <div class="caption">
