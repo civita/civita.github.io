@@ -26,9 +26,10 @@ toc:
   - name: Results
   - name: Discussion and improvements
     subsections:
-      - name: How do bubble radius and pressure vary in different solutions?
+      - name: How do bubble radius and pressure vary in different solutions (Rayleigh-Plesset equation)?
       - name: What is the bubble temperature? Can it achieve nuclear fusion?
   - name: Conclusions
+  - name: Journal
 ---
 
 ## Abstract
@@ -101,6 +102,8 @@ This equation governs the bubble dynamics and indirectly determines the bubble's
 13. Once a blue light spot is visually confirmed from Step 10, capture it using a camera with a long exposure.
 
 Note: For further detailed procedures, please refer to <d-cite key="geisler:1996"/>.
+
+<a name="section-results"></a>
 
 ## Results
 
@@ -422,7 +425,7 @@ Using MATLAB, we simulated the radius and pressure changes for water, glycerol, 
     <div class="col-sm-3 mt-3 mt-md-0">
     </div>
     <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/project_sonoluminescence/qa-2.png" width="400" class="img-fluid z-depth-1" %}
+        {% include figure.html path="assets/img/project_sonoluminescence/qa-1.png" width="400" class="img-fluid z-depth-1" %}
     </div>
     <div class="col-sm-3 mt-3 mt-md-0">
     </div>
@@ -446,3 +449,42 @@ However, producing these discrete spectral lines requires energy $$\gg 13 \, \te
 As for cold nuclear fusion, the inability to estimate temperatures accurately and the transient nature of luminescence remain obstacles under investigation.
 
 ## Conclusions
+
+This experiment was a challenging task. At the beginning of the semester, the teaching assistant mentioned that experiments in Group B were particularly challenging, and indeed, we made no progress in the first week. We consulted online guides and suggestions from other groups, gradually gaining a better understanding of the procedures. The steps sounded simple when described online or by classmates, leading us to believe that success was guaranteed if we followed them.
+
+On **5/10**, we returned to the lab in the evening to conduct the experiment but, despite our efforts, failed to observe any luminescence (see detailed process in Section [Journal](#section-journal)). At the time, we followed the parameters of previous successful cases, including water levels, transducer positions, and frequencies. On **5/11**, we worked from 1 PM to 9 PM but still saw no results. This made us question why we couldn’t replicate the phenomenon despite adhering to the recommended steps. 
+
+Driven by curiosity and a strong desire to observe luminescence, we scheduled a session with the teaching assistant on **5/12**, starting at 9 AM. We adjusted various parameters, invited students from other groups for guidance, and asked them to help verify whether the luminescence was visible (as prior reports mentioned that dim luminescence could appear as an optical illusion). Despite these efforts, we still didn’t achieve success.
+
+Finally, on **5/18**, we observed luminescence! When one of our team members shouted, “I see it!”, another thought it was a joke, but upon verification, it turned out to be true. After further testing, we concluded that water level was the critical factor. Overjoyed, we captured the phenomenon using a camera—something that no group had successfully done before.
+
+This experiment taught us a great deal. Many experimental variables interact with each other (e.g., power strips affecting waveforms), and even when following previous groups' steps, results are not always consistent. We identified several areas for improvement, such as measuring temperature or using alternative solutions. We hope future groups can validate our procedures, build upon our findings, and further refine this experiment to achieve more comprehensive results.
+
+<a name="section-journal"></a>
+
+## Journal
+
+- **5/4**  
+  During the first week, after understanding the experimental principles and procedures, we began the degassing process. However, we noticed the oscilloscope waveform was unstable (the transducer couldn't be mounted correctly, and pressing the heating button caused the waveform to "shift"). With the teaching assistant's help, we switched to another oscilloscope and recalibrated it, but the issue persisted. We later found that the power strip connected to the oscilloscope had a flickering indicator light, suggesting electrical interference. Plugging the oscilloscope directly into a wall socket resolved the issue.  
+
+  Pressing the heating button caused the heating wire's temperature to rise, producing a plastic smell. To avoid melting the wire's plastic coating and causing a short circuit, we replaced the wire with a thicker, more robust one. Throughout the day, we replaced the water multiple times, each requiring significant adjustments (e.g., mounting the transducer at the optimal position and avoiding resonance with other objects). While pressing the heating button caused waveform changes indicating bubble formation, we observed no luminescence by 9 PM. We scheduled the next session for the following Tuesday evening.  
+
+- **5/10**  
+  Following the steps from **5/4**, we continued the experiment after the Tuesday group finished. However, we still observed no luminescence and left the lab at 9 PM.  
+
+- **5/11**  
+  On this day, we invited a team member from a previous successful group to share their process. They explained that luminescence wasn’t observed when the waveform showed significant changes but rather when it closely resembled the original sine wave with minor distortions. This indicated the bubble's presence at critical voltage, which could produce luminescence. With their guidance, we continued the experiment but were still unable to observe any glowing bubbles.  
+
+- **5/12**  
+  On Thursday, we started the experiment at 9 AM with the teaching assistant. After heating, the water temperature rose, and excessive gas dissolved into the resonance chamber, distorting the waveform in ways that couldn’t be corrected using standard methods. We had to replace the water repeatedly, each time requiring extensive adjustments. Despite working from 9 AM to 8 PM, we still observed no glowing bubbles.  
+
+- **5/18**  
+  This was our final day of experimentation. Initially, we were prepared to accept failure if we didn’t succeed. Previous water levels were set to ~9.2 cm, based on prior groups' reports of successful luminescence. After reconsidering, we decided to adjust the water level.  
+
+  Around 3 PM, we replaced the water, raising the level to ~10 cm. Following the procedures, including degassing for over 20 minutes and transferring water to the resonance chamber via a siphon, we found it easier to adjust the transducer to the optimal position (near the chamber's center, with an amplitude of ~1V). At approximately 3:30 PM, team member Yan Jingzhe observed luminescence! The light was blue-white, located near the transducer, and significantly brighter than expected, leaving no room for doubt. After repeated confirmations by team member, we verified that it was indeed a glowing bubble. Although we invited the teaching assistant to observe, the bubble had become unstable by then, and they couldn’t see it.  
+
+  We continued heating, but as the water temperature rose, the waveform became increasingly distorted. After discussion, we decided to maintain the current water level and transducer position for another water replacement. At around 5 PM, we observed luminescence again and invited the teaching assistant and other group members to confirm it, all of whom verified the phenomenon. Using a camera, we captured the glowing bubbles, with the results and parameters documented in Section [Results](#sec-results). Additionally, we observed two glowing bubbles simultaneously.  
+
+  Following this, we hypothesized that water level might determine the experiment's success. We lowered the water to ~9 cm and resumed the experiment but observed no luminescence. Gradually increasing the water back to 10 cm and reheating produced luminescence again! Based on this, we recommend future groups adjust the water level if their experiments are unsuccessful.  
+
+  In the first week, we had considered improvements to make after observing luminescence, but since we only succeeded in the third week, there wasn’t enough time to implement them. We hope future groups can continue this work and refine the experiment further.
