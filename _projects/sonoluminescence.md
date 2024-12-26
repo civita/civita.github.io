@@ -176,16 +176,12 @@ In the third week, we observed multiple instances of bubble luminescence. Images
 
 <a name="fig-4"></a>
 <div class="row">
-    <div class="col-sm-3 mt-3 mt-md-0">
-    </div>
-    <div class="col-sm-6 mt-3 mt-md-0">
+    <div class="col-sm mt-3 mt-md-0">
         {% include figure.html path="assets/img/project_sonoluminescence/results/1.jpg" width="400" class="img-fluid z-depth-1" %}
-    </div>
-    <div class="col-sm-3 mt-3 mt-md-0">
     </div>
 </div>
 <div class="caption">
-    Figure 2: First observed luminescent bubble at 15:34 (f/6, 25s, ISO 640).
+    Figure 4: First observed luminescent bubble at 15:34 (f/6, 25s, ISO 640).
 </div>
 
 
