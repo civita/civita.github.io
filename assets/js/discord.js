@@ -2,7 +2,7 @@ $(document).ready(function () {
   $.getJSON("https://api.ipify.org?format=json",
     function (data) {
       var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/1181742784877703288/p81cN6wyBVkHXb5BQwNdeqB0cH5ZWyDKzisxRL8vWMoPAyej7IZQGExKDL60iZ9NypQy");
+      request.open("POST", process.env.DISCORD_WEBHOOK_URL);
       request.setRequestHeader('Content-type', 'application/json');
       const payload = {
         "content": "A page is being accessed!",
