@@ -27,7 +27,7 @@
       description:
         - 'GPA: 3.99/4.30'
         - Minor in Computer Science and Information Engineering
-        - 'Recipient of the Presidential Award (ranking in the top 5% of the class) for 3 semesters '
+        - 'Recipient of the Presidential Award (ranking in the top 5% of the class) for 3 semesters'
         - President of National Taiwan University Symphony Orchestra
         - title: Teaching Assistant
           contents:
@@ -39,6 +39,10 @@
     - title: Software Developer
       company: Oracle NetSuite
       year: 2024 - now
+      description:
+        - Collaborated with cross-functional teams to resolve customer issues, leveraging NetSuite's capabilities to provide innovative solutions and improve customer satisfaction
+        - Developed and maintained complex SQL queries to extract insights from large datasets, informing business decisions and driving growth.
+        - Designed and implemented custom NetSuite components using Figjam, streamlining business processes and enhancing user experience.
 
     - title: Software Developer Internship
       company: Oracle NetSuite
