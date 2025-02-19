@@ -15,7 +15,7 @@
         - 'GPA: 3.97/4.00'
         - title: Teaching Assistant
           contents:
-            - Parallel Systems (two semesters)
+            - Parallel Systems (2 semesters)
     - title: MSc in Computer Science and Information Engineering
       institution: National Taiwan University
       description:
@@ -62,7 +62,7 @@
         - Built and managed Docker services for project management and monitoring systems, including Redmine, Grafana, and Prometheus.
 
     - title: Network Infrastructure Administrator
-      company: Graduate Institute of Communication Engineering, National Taiwan University
+      company: National Taiwan University
       year: 2018 - 2020
       description:
         - Led the network administration team, managing maintenance for switches, firewall, routers, and NAS.
