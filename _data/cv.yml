@@ -76,15 +76,15 @@
 - title: Technical Skills
   type: nested_list
   contents:
-    - title: Programming Languages & IDEs
+    - title: Programming Languages
       items: 
-        - Java, Go, Python, HTML/CSS, JavaScript, SQL, PHP, Bash, LaTeX, VS Code, IntelliJ IDEA
-    - title: Technologies & Frameworks
+        - C/C++, Go, Java, Python, JavaScript/TypeScript, SQL, Bash
+    - title: Systems & Architecture
       items:
-        - Linux, Git, Perforce, TeamCity, Docker, PyTorch, HuggingFace
-    - title: Others
+        - Compiler Optimization (GraalVM), Distributed Systems, Hardware Simulation, RESTful Architecture, High-Concurrency Services
+    - title: Technologies & Infrastructure
       items:
-        - Agile methodology, Scrum, Jira, Confluence
+        - Linux, Docker, Git, CI/CD, PyTorch, Hugging Face, Grafana, Prometheus
 
 - title: Other Interests
   type: list
